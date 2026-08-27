@@ -1,0 +1,60 @@
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/data/site";
+
+const connectedWork = [
+  "Conversations",
+  "Customer context",
+  "Campaigns",
+  "Automation",
+  "Team collaboration",
+];
+
+export function ProductOverview() {
+  return (
+    <section id="wazely-crm" className="section-space bg-soft scroll-mt-24">
+      <div className="page-shell">
+        <div className="crm-panel grid overflow-hidden rounded-[28px] border border-emerald-200/80 bg-white lg:grid-cols-[.92fr_1.08fr]">
+          <div className="p-7 sm:p-10 lg:p-14">
+            <div className="flex items-center gap-2 text-sm font-semibold text-emerald-700">
+              <CheckCircle2 aria-hidden="true" size={18} /> Available now
+            </div>
+            <p className="mt-9 text-sm font-medium text-slate-500">Product</p>
+            <h2 className="text-navy mt-2 text-[clamp(2.25rem,4vw,4.5rem)] leading-none font-semibold tracking-[-.045em]">
+              Wazely CRM
+            </h2>
+            <p className="section-copy mt-6 max-w-xl">
+              Keep conversations, contacts, campaigns, automation, and the
+              people doing the work in one clear customer workspace.
+            </p>
+            <Button asChild size="lg" className="mt-8">
+              <Link href={siteConfig.crmUrl}>
+                Explore Wazely CRM <ArrowUpRight aria-hidden="true" size={18} />
+              </Link>
+            </Button>
+          </div>
+          <div className="crm-workspace-panel border-t border-emerald-100 bg-[linear-gradient(145deg,#f0fdfa,#f8fafc)] p-7 sm:p-10 lg:border-t-0 lg:border-l lg:p-14">
+            <p className="text-xs font-semibold tracking-[.18em] text-emerald-700 uppercase">
+              One connected workspace
+            </p>
+            <div className="mt-8 divide-y divide-emerald-100 border-y border-emerald-100">
+              {connectedWork.map((item, index) => (
+                <div
+                  key={item}
+                  className="flex items-center justify-between py-4 sm:py-5"
+                >
+                  <span className="text-navy font-medium">{item}</span>
+                  <span className="font-mono text-xs text-emerald-600">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
