@@ -36,8 +36,8 @@ export function SiteHeader() {
           <ThemeToggle />
           <div className="hidden lg:block">
             <Button asChild variant="gradient">
-              <Link href={siteConfig.crmUrl}>
-                Explore Wazely CRM <ArrowUpRight aria-hidden="true" size={16} />
+              <Link href={siteConfig.demoUrl}>
+                Book a demo <ArrowUpRight aria-hidden="true" size={16} />
               </Link>
             </Button>
           </div>

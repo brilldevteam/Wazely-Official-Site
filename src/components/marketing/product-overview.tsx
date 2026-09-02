@@ -1,6 +1,8 @@
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
+import { BookDemoButton } from "@/components/marketing/book-demo-button";
+import { ScrollReveal } from "@/components/marketing/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
 
@@ -16,7 +18,7 @@ export function ProductOverview() {
   return (
     <section id="wazely-crm" className="section-space bg-soft scroll-mt-24">
       <div className="page-shell">
-        <div className="crm-panel grid overflow-hidden rounded-[28px] border border-emerald-200/80 bg-white lg:grid-cols-[.92fr_1.08fr]">
+        <ScrollReveal className="crm-panel grid overflow-hidden rounded-[28px] border border-emerald-200/80 bg-white lg:grid-cols-[.92fr_1.08fr]">
           <div className="p-7 sm:p-10 lg:p-14">
             <div className="flex items-center gap-2 text-sm font-semibold text-emerald-700">
               <CheckCircle2 aria-hidden="true" size={18} /> Available now
@@ -29,11 +31,15 @@ export function ProductOverview() {
               Keep conversations, contacts, campaigns, automation, and the
               people doing the work in one clear customer workspace.
             </p>
-            <Button asChild size="lg" className="mt-8">
-              <Link href={siteConfig.crmUrl}>
-                Explore Wazely CRM <ArrowUpRight aria-hidden="true" size={18} />
-              </Link>
-            </Button>
+            <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
+              <Button asChild variant="gradient" size="lg">
+                <Link href={siteConfig.crmUrl}>
+                  Explore Wazely CRM{" "}
+                  <ArrowUpRight aria-hidden="true" size={18} />
+                </Link>
+              </Button>
+              <BookDemoButton />
+            </div>
           </div>
           <div className="crm-workspace-panel border-t border-emerald-100 bg-[linear-gradient(145deg,#f0fdfa,#f8fafc)] p-7 sm:p-10 lg:border-t-0 lg:border-l lg:p-14">
             <p className="text-xs font-semibold tracking-[.18em] text-emerald-700 uppercase">
@@ -53,7 +59,7 @@ export function ProductOverview() {
               ))}
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-navy text-white shadow-[0_10px_30px_-12px_rgba(15,29,53,.65)] hover:-translate-y-0.5 hover:bg-[#162b4c]",
+          "bg-navy text-white shadow-[0_10px_30px_-12px_rgba(15,29,53,.65)] hover:-translate-y-0.5 hover:bg-[#162b4c] dark:bg-white dark:text-navy dark:shadow-[0_10px_30px_-12px_rgba(0,0,0,.6)] dark:hover:bg-slate-100",
         secondary:
           "border border-slate-300 bg-white text-navy hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50",
         gradient:

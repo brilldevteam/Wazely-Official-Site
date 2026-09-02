@@ -1,10 +1,12 @@
+import { BookDemoButton } from "@/components/marketing/book-demo-button";
+import { ScrollReveal } from "@/components/marketing/scroll-reveal";
 import { capabilities } from "@/data/capabilities";
 
 export function CapabilityGrid() {
   return (
     <section id="capabilities" className="section-space bg-soft scroll-mt-24">
       <div className="page-shell">
-        <div className="max-w-2xl">
+        <ScrollReveal className="max-w-2xl">
           <p className="eyebrow">Connected capabilities</p>
           <h2 className="section-title mt-4">
             More of the customer journey, in context.
@@ -13,8 +15,8 @@ export function CapabilityGrid() {
             Coordinate the practical work around every customer conversation
             without losing the details that help teams act.
           </p>
-        </div>
-        <div className="mt-12 grid overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-3">
+        </ScrollReveal>
+        <div className="scroll-reveal-stagger mt-12 grid overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-3">
           {capabilities.map(({ title, description, icon: Icon }) => (
             <article
               key={title}
@@ -31,6 +33,9 @@ export function CapabilityGrid() {
               </p>
             </article>
           ))}
+        </div>
+        <div className="mt-10 flex justify-center">
+          <BookDemoButton />
         </div>
       </div>
     </section>
