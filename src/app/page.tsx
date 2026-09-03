@@ -40,7 +40,6 @@ const features = [
     image: "/screenshots/crm-campaigns.png",
     imageAlt: "Wazely CRM campaign dashboard with delivery and read analytics",
     imagePosition: "right" as const,
-    showBookDemo: true,
   },
   {
     eyebrow: "Visual automation",

@@ -9,7 +9,7 @@ export type PricingPlan = {
 export const pricingPlans: PricingPlan[] = [
   {
     name: "Startup",
-    price: 50,
+    price: 189,
     cadence: "month",
     features: [
       "Up to 5 user agents",
@@ -28,7 +28,7 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Medium",
-    price: 100,
+    price: 369,
     cadence: "month",
     featured: true,
     features: [
@@ -54,7 +54,7 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Premium",
-    price: 250,
+    price: 899,
     cadence: "month",
     features: [
       "100 user agents",

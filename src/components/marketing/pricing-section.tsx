@@ -22,7 +22,7 @@ export function PricingSection() {
             </p>
           </div>
           <div className="rounded-2xl border border-cyan-200 bg-cyan-50 px-5 py-4 text-sm leading-6 text-slate-700">
-            <strong className="text-navy block">Billed monthly in USD</strong>
+            <strong className="text-navy block">Billed monthly in QAR</strong>
             Discounts are available for yearly plans.
           </div>
         </ScrollReveal>
@@ -49,7 +49,7 @@ export function PricingSection() {
                 </div>
                 <div className="mt-7 flex items-end gap-2">
                   <span className="text-navy text-5xl font-semibold tracking-[-.05em]">
-                    ${plan.price}
+                    QAR {plan.price}
                   </span>
                   <span className="pb-1.5 text-sm text-slate-500">
                     / {plan.cadence}

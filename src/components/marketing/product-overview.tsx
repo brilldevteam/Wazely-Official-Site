@@ -32,7 +32,7 @@ export function ProductOverview() {
               people doing the work in one clear customer workspace.
             </p>
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
-              <Button asChild variant="gradient" size="lg">
+              <Button asChild variant="secondary" size="lg">
                 <Link href={siteConfig.crmUrl}>
                   Explore Wazely CRM{" "}
                   <ArrowUpRight aria-hidden="true" size={18} />

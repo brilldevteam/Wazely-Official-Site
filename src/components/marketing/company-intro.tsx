@@ -14,12 +14,12 @@ export function CompanyIntro() {
     <section id="about" className="section-space scroll-mt-24 bg-white">
       <div className="page-shell">
         <div className="scroll-reveal-stagger grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:gap-24">
-          <div>
+          <div className="flex flex-col">
             <p className="eyebrow">About Wazely</p>
             <h2 className="section-title mt-4 max-w-xl">
               Practical software that keeps work connected.
             </h2>
-            <div className="mt-10 flex justify-end">
+            <div className="mt-10 flex flex-1 items-center justify-start lg:translate-y-10">
               <BookDemoButton />
             </div>
           </div>

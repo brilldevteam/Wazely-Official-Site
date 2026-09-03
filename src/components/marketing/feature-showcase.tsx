@@ -1,6 +1,5 @@
 import { Check } from "lucide-react";
 
-import { BookDemoButton } from "@/components/marketing/book-demo-button";
 import { BrowserFrame } from "@/components/marketing/browser-frame";
 import { ScrollReveal } from "@/components/marketing/scroll-reveal";
 import { cn } from "@/lib/utils";
@@ -13,7 +12,6 @@ type FeatureShowcaseProps = {
   image: string;
   imageAlt: string;
   imagePosition?: "left" | "right";
-  showBookDemo?: boolean;
 };
 
 export function FeatureShowcase({
@@ -24,7 +22,6 @@ export function FeatureShowcase({
   image,
   imageAlt,
   imagePosition = "left",
-  showBookDemo = false,
 }: FeatureShowcaseProps) {
   return (
     <section className="section-space overflow-hidden">
@@ -62,11 +59,6 @@ export function FeatureShowcase({
               </li>
             ))}
           </ul>
-          {showBookDemo ? (
-            <div className="mt-8 flex justify-center">
-              <BookDemoButton />
-            </div>
-          ) : null}
         </ScrollReveal>
       </div>
     </section>

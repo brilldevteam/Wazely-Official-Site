@@ -6,15 +6,20 @@ export function CapabilityGrid() {
   return (
     <section id="capabilities" className="section-space bg-soft scroll-mt-24">
       <div className="page-shell">
-        <ScrollReveal className="max-w-2xl">
-          <p className="eyebrow">Connected capabilities</p>
-          <h2 className="section-title mt-4">
-            More of the customer journey, in context.
-          </h2>
-          <p className="section-copy mt-5">
-            Coordinate the practical work around every customer conversation
-            without losing the details that help teams act.
-          </p>
+        <ScrollReveal className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <p className="eyebrow">Connected capabilities</p>
+            <h2 className="section-title mt-4">
+              More of the customer journey, in context.
+            </h2>
+            <p className="section-copy mt-5">
+              Coordinate the practical work around every customer conversation
+              without losing the details that help teams act.
+            </p>
+          </div>
+          <div className="lg:-translate-y-4">
+            <BookDemoButton />
+          </div>
         </ScrollReveal>
         <div className="scroll-reveal-stagger mt-12 grid overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-3">
           {capabilities.map(({ title, description, icon: Icon }) => (
@@ -33,9 +38,6 @@ export function CapabilityGrid() {
               </p>
             </article>
           ))}
-        </div>
-        <div className="mt-10 flex justify-center">
-          <BookDemoButton />
         </div>
       </div>
     </section>
