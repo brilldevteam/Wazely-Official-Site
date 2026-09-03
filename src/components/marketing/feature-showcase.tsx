@@ -24,10 +24,14 @@ export function FeatureShowcase({
   imagePosition = "left",
 }: FeatureShowcaseProps) {
   return (
-    <section className="section-space overflow-hidden">
+    <section className="overflow-hidden pt-8 pb-20 sm:py-16 lg:py-[clamp(5rem,9vw,8.5rem)]">
+      {/* On mobile the screenshot sits at the end of the section: a tight gap
+          above it (grid gap) pulls it up against its own copy, and a large
+          bottom padding gives it clear breathing room before the next
+          section. Desktop side-by-side layout is unchanged via lg:order-*. */}
       <div
         className={cn(
-          "page-shell grid items-center gap-12 lg:gap-18",
+          "page-shell grid items-center gap-8 sm:gap-14 lg:gap-18",
           imagePosition === "left"
             ? "lg:grid-cols-[1.2fr_.8fr]"
             : "lg:grid-cols-[.8fr_1.2fr]",
@@ -35,13 +39,19 @@ export function FeatureShowcase({
       >
         <ScrollReveal
           direction={imagePosition}
-          className={cn(imagePosition === "right" && "lg:order-2")}
+          className={cn(
+            "order-2",
+            imagePosition === "right" ? "lg:order-2" : "lg:order-1",
+          )}
         >
           <BrowserFrame src={image} alt={imageAlt} width={1680} height={944} />
         </ScrollReveal>
         <ScrollReveal
           direction={imagePosition === "left" ? "right" : "left"}
-          className={cn("max-w-xl", imagePosition === "right" && "lg:order-1")}
+          className={cn(
+            "order-1 max-w-xl",
+            imagePosition === "right" ? "lg:order-1" : "lg:order-2",
+          )}
         >
           <p className="eyebrow">{eyebrow}</p>
           <h2 className="section-title mt-4">{title}</h2>
