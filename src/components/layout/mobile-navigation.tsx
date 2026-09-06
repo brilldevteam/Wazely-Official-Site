@@ -5,7 +5,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-import { navigation } from "@/data/navigation";
+import { navigation, productNavigation } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { NavigationLink } from "@/components/layout/navigation-link";
@@ -47,6 +47,23 @@ export function MobileNavigation() {
             Navigate the Wazely website.
           </Dialog.Description>
           <nav aria-label="Mobile navigation" className="mt-8 flex flex-col">
+            <Link
+              href="/#products"
+              onClick={() => setOpen(false)}
+              className="text-teal flex min-h-11 items-center text-xs font-semibold tracking-[.14em] uppercase"
+            >
+              Products
+            </Link>
+            {productNavigation.map((product) => (
+              <Link
+                key={product.href}
+                href={product.href}
+                onClick={() => setOpen(false)}
+                className="text-navy hover:text-teal flex min-h-13 items-center border-b border-slate-200 pl-4 text-lg font-medium transition-colors focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 focus-visible:outline-none"
+              >
+                {product.label}
+              </Link>
+            ))}
             {navigation.map((item) => (
               <NavigationLink
                 key={item.label}

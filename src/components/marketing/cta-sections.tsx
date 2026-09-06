@@ -5,7 +5,15 @@ import { ScrollReveal } from "@/components/marketing/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
 
-export function KnowledgeBaseCta() {
+type KnowledgeBaseCtaProps = {
+  title?: string;
+  description?: string;
+};
+
+export function KnowledgeBaseCta({
+  title = "Guidance for every Wazely workspace.",
+  description = "Find practical help for setting up Wazely products, organizing your workspace, and keeping everyday work moving.",
+}: KnowledgeBaseCtaProps = {}) {
   return (
     <section id="resources" className="section-space bg-soft scroll-mt-24">
       <div className="page-shell">
@@ -18,11 +26,10 @@ export function KnowledgeBaseCta() {
           </div>
           <div>
             <h2 className="text-navy text-2xl font-semibold tracking-tight sm:text-3xl">
-              Need help with Wazely CRM?
+              {title}
             </h2>
             <p className="mt-3 max-w-2xl leading-7 text-slate-600">
-              Find practical guides for setup, WhatsApp connections, contacts,
-              templates, campaigns, automation, and troubleshooting.
+              {description}
             </p>
           </div>
           <Button asChild variant="secondary" size="lg">
@@ -37,16 +44,34 @@ export function KnowledgeBaseCta() {
   );
 }
 
-export function FinalCta() {
+type FinalCtaProps = {
+  eyebrow?: string;
+  title?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  id?: string;
+};
+
+export function FinalCta({
+  eyebrow = "Wazely",
+  title = "Choose the Wazely product that fits your work.",
+  primaryLabel = "Explore Wazely CRM",
+  primaryHref = "/crm",
+  secondaryLabel = "Explore Wazely ERP",
+  secondaryHref = "/erp",
+  id = "book-demo",
+}: FinalCtaProps = {}) {
   return (
-    <section className="bg-soft pb-18 sm:pb-24 lg:pb-30">
+    <section id={id} className="bg-soft scroll-mt-24 pb-18 sm:pb-24 lg:pb-30">
       <div className="page-shell">
         <ScrollReveal className="final-cta overflow-hidden rounded-[30px] px-6 py-16 text-center text-white sm:px-10 sm:py-20">
           <p className="text-xs font-semibold tracking-[.2em] text-cyan-100 uppercase">
-            Wazely CRM
+            {eyebrow}
           </p>
-          <h2 className="mx-auto mt-5 max-w-3xl text-[clamp(2.2rem,5vw,4.6rem)] leading-[1.02] font-semibold tracking-[-.045em] text-balance">
-            Bring your customer work into one connected place.
+          <h2 className="mx-auto mt-5 max-w-4xl text-[clamp(2.1rem,4vw,3.6rem)] leading-[1.04] font-semibold tracking-[-.04em] text-balance">
+            {title}
           </h2>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
@@ -55,8 +80,8 @@ export function FinalCta() {
               size="lg"
               className="cta-light-button text-navy border-white bg-white hover:bg-cyan-50"
             >
-              <Link href={siteConfig.crmUrl}>
-                Explore Wazely CRM <ArrowUpRight aria-hidden="true" size={18} />
+              <Link href={primaryHref}>
+                {primaryLabel} <ArrowUpRight aria-hidden="true" size={18} />
               </Link>
             </Button>
             <Button
@@ -65,8 +90,8 @@ export function FinalCta() {
               size="lg"
               className="border-white/55 bg-transparent text-white hover:border-white hover:bg-white/10"
             >
-              <Link href={siteConfig.demoUrl}>
-                Book a demo <ArrowUpRight aria-hidden="true" size={18} />
+              <Link href={secondaryHref}>
+                {secondaryLabel} <ArrowUpRight aria-hidden="true" size={18} />
               </Link>
             </Button>
           </div>

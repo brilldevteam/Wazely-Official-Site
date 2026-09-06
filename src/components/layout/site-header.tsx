@@ -4,6 +4,7 @@ import Link from "next/link";
 import { BrandLogo } from "@/components/layout/brand-logo";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { NavigationLink } from "@/components/layout/navigation-link";
+import { ProductMenu } from "@/components/layout/product-menu";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { navigation } from "@/data/navigation";
@@ -24,6 +25,7 @@ export function SiteHeader() {
           aria-label="Primary navigation"
           className="hidden items-center gap-0.5 lg:flex"
         >
+          <ProductMenu />
           {navigation.map((item) => (
             <NavigationLink
               key={item.label}
@@ -34,7 +36,7 @@ export function SiteHeader() {
         </nav>
         <div className="flex shrink-0 items-center gap-1.5">
           <ThemeToggle />
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <Button asChild variant="gradient">
               <Link href={siteConfig.demoUrl}>
                 Book a demo <ArrowUpRight aria-hidden="true" size={16} />

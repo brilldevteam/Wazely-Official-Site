@@ -26,9 +26,9 @@ export function CompanyIntro() {
           <div>
             <p className="section-copy max-w-2xl">
               Wazely creates connected business software that helps teams bring
-              customer work, communication, and daily operations together.
-              Wazely CRM is the first available product in a platform designed
-              to grow with the way businesses work.
+              customer relationships, communication, finance, and daily
+              operations together. Wazely CRM and Wazely ERP are focused
+              products designed to grow with the way businesses work.
             </p>
             <div className="scroll-reveal-stagger mt-9 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200">
               {pillars.map(({ label, icon: Icon }) => (

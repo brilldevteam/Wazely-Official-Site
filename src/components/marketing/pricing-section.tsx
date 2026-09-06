@@ -2,24 +2,34 @@ import { Check } from "lucide-react";
 
 import { BookDemoButton } from "@/components/marketing/book-demo-button";
 import { ScrollReveal } from "@/components/marketing/scroll-reveal";
-import { pricingPlans } from "@/data/pricing";
+import { pricingPlans, type PricingPlan } from "@/data/pricing";
 import { cn } from "@/lib/utils";
 
-export function PricingSection() {
+type PricingSectionProps = {
+  id?: string;
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  plans?: PricingPlan[];
+  demoHref?: string;
+};
+
+export function PricingSection({
+  id = "pricing",
+  eyebrow = "Pricing",
+  title = "Plans that scale with your customer work.",
+  description = "Choose the monthly capacity that fits your team today, with room to grow into more agents, conversations, automation, and integrations.",
+  plans = pricingPlans,
+  demoHref,
+}: PricingSectionProps = {}) {
   return (
-    <section id="pricing" className="section-space bg-soft scroll-mt-24">
+    <section id={id} className="section-space bg-soft scroll-mt-24">
       <div className="page-shell">
         <ScrollReveal className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-3xl">
-            <p className="eyebrow">Pricing</p>
-            <h2 className="section-title mt-4">
-              Plans that scale with your customer work.
-            </h2>
-            <p className="section-copy mt-5 max-w-2xl">
-              Choose the monthly capacity that fits your team today, with room
-              to grow into more agents, conversations, automation, and
-              integrations.
-            </p>
+            <p className="eyebrow">{eyebrow}</p>
+            <h2 className="section-title mt-4">{title}</h2>
+            <p className="section-copy mt-5 max-w-2xl">{description}</p>
           </div>
           <div className="rounded-2xl border border-cyan-200 bg-cyan-50 px-5 py-4 text-sm leading-6 text-slate-700">
             <strong className="text-navy block">Billed monthly in QAR</strong>
@@ -28,7 +38,7 @@ export function PricingSection() {
         </ScrollReveal>
 
         <div className="scroll-reveal-stagger mt-12 grid items-stretch gap-5 lg:grid-cols-3">
-          {pricingPlans.map((plan) => (
+          {plans.map((plan) => (
             <article
               key={plan.name}
               className={cn(
@@ -47,6 +57,11 @@ export function PricingSection() {
                     </span>
                   ) : null}
                 </div>
+                {plan.audience ? (
+                  <p className="mt-4 min-h-12 text-sm leading-6 text-slate-600">
+                    Best for {plan.audience}.
+                  </p>
+                ) : null}
                 <div className="mt-7 flex items-end gap-2">
                   <span className="text-navy text-5xl font-semibold tracking-[-.05em]">
                     QAR {plan.price}
@@ -75,11 +90,16 @@ export function PricingSection() {
                   </li>
                 ))}
               </ul>
+              {plan.note ? (
+                <p className="mt-7 rounded-xl border border-cyan-200 bg-cyan-50 p-4 text-sm leading-6 text-slate-700">
+                  {plan.note}
+                </p>
+              ) : null}
             </article>
           ))}
         </div>
         <div className="mt-10 flex justify-center">
-          <BookDemoButton />
+          <BookDemoButton href={demoHref} />
         </div>
       </div>
     </section>

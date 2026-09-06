@@ -1,9 +1,10 @@
 export const siteConfig = {
   companyName: "Wazely",
-  title: "Wazely | Connected Business Software & Wazely CRM",
+  title: "Wazely | Connected CRM and ERP Business Software",
   description:
-    "Wazely builds practical connected business software. Explore Wazely CRM for customer conversations, contacts, campaigns, automation, and teamwork.",
+    "Wazely builds connected CRM and ERP software for customer relationships, finance, sales, operations, and everyday business work.",
   crmUrl: "https://crm.wazely.io",
+  erpUrl: "https://erp.wazely.io",
   demoUrl: "https://crm.wazely.io",
   knowledgeBaseUrl: "https://help.wazely.io/enterprise/",
   socialLinks: {},

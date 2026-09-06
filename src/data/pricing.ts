@@ -4,6 +4,8 @@ export type PricingPlan = {
   cadence: string;
   features: string[];
   featured?: boolean;
+  audience?: string;
+  note?: string;
 };
 
 export const pricingPlans: PricingPlan[] = [
@@ -78,5 +80,72 @@ export const pricingPlans: PricingPlan[] = [
       "Custom integration support",
       "Dedicated support",
     ],
+  },
+];
+
+export const erpPricingPlans: PricingPlan[] = [
+  {
+    name: "Starter",
+    price: 299,
+    cadence: "month",
+    audience: "Small shops, service businesses, and startups",
+    features: [
+      "1 company",
+      "3 users",
+      "Sales invoices",
+      "Quotations",
+      "Customers and vendors",
+      "Products and services",
+      "Basic accounting",
+      "Basic reports",
+      "Email support",
+    ],
+  },
+  {
+    name: "Business",
+    price: 599,
+    cadence: "month",
+    featured: true,
+    audience: "Growing companies, trading businesses, and accounting teams",
+    features: [
+      "1 company",
+      "10 users",
+      "Everything in Starter",
+      "Purchase management",
+      "Double-entry accounting",
+      "Profit and Loss report",
+      "Balance Sheet",
+      "Trial Balance",
+      "Customer payments",
+      "Vendor payments",
+      "Bulk import",
+      "Document templates",
+      "Role permissions",
+      "Priority support",
+    ],
+  },
+  {
+    name: "Enterprise",
+    price: 999,
+    cadence: "month",
+    audience:
+      "Larger companies, multi-team businesses, and teams moving from manual accounting",
+    features: [
+      "Unlimited users",
+      "Multiple departments and branches",
+      "Everything in Business",
+      "HRM",
+      "CRM",
+      "Projects",
+      "POS",
+      "Assets",
+      "Contracts",
+      "AI agent and tools",
+      "Advanced reports",
+      "Custom setup support",
+      "Training session",
+      "Dedicated support",
+    ],
+    note: "Need custom modules or migration support? Contact us for a tailored plan.",
   },
 ];
