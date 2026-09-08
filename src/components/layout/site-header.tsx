@@ -39,7 +39,7 @@ export function SiteHeader() {
           <div className="hidden xl:block">
             <Button asChild variant="gradient">
               <Link href={siteConfig.demoUrl}>
-                Book a demo <ArrowUpRight aria-hidden="true" size={16} />
+                Try the demo <ArrowUpRight aria-hidden="true" size={16} />
               </Link>
             </Button>
           </div>

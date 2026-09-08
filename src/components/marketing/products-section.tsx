@@ -16,10 +16,11 @@ export function ProductsSection() {
           </h2>
           <p className="section-copy mt-5">
             Choose the workspace that matches the work in front of you. CRM
-            connects customer relationships; ERP connects business operations.
+            connects customer relationships, ERP connects business operations,
+            and Color is a free AI toolkit for building your brand palette.
           </p>
         </ScrollReveal>
-        <div className="scroll-reveal-stagger mt-12 grid gap-5 lg:grid-cols-2">
+        <div className="scroll-reveal-stagger mt-12 grid gap-5 lg:grid-cols-3">
           {products.map((product) => (
             <article
               key={product.name}
@@ -30,20 +31,20 @@ export function ProductsSection() {
                   <Image
                     src={product.image}
                     alt={product.imageAlt}
-                    width={product.slug === "erp" ? 1920 : 1672}
-                    height={product.slug === "erp" ? 950 : 940}
-                    sizes="(max-width: 1024px) 94vw, 46vw"
+                    width={product.imageWidth}
+                    height={product.imageHeight}
+                    sizes="(max-width: 1024px) 94vw, 31vw"
                     className="aspect-[1.9/1] w-full object-cover object-top"
                   />
                 </div>
-                <div className="mt-8 flex flex-wrap items-center gap-3">
+                <div className="mt-8">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800">
                     <CheckCircle2 aria-hidden="true" size={14} />
                     {product.status}
                   </span>
-                  <span className="text-xs font-semibold tracking-[.12em] text-slate-500 uppercase">
+                  <p className="mt-3 text-xs font-semibold tracking-[.12em] text-slate-500 uppercase">
                     {product.category}
-                  </span>
+                  </p>
                 </div>
                 <h3 className="text-navy mt-5 text-2xl font-semibold tracking-tight sm:text-3xl">
                   {product.name}
@@ -64,6 +65,9 @@ export function ProductsSection() {
               </div>
               <Link
                 href={product.href}
+                {...(product.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
                 className="text-teal mt-10 inline-flex items-center gap-2 self-start rounded-sm text-sm font-semibold focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-4 focus-visible:outline-none"
               >
                 {product.cta} <ArrowUpRight aria-hidden="true" size={17} />

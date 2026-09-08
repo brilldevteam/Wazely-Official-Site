@@ -64,6 +64,9 @@ export function ProductMenu() {
             key={product.href}
             href={product.href}
             onClick={closeMenu}
+            {...(product.external
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
             className="block rounded-xl px-4 py-3 transition-colors hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:outline-none"
           >
             <span className="text-navy block text-sm font-semibold">

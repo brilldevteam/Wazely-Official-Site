@@ -19,7 +19,7 @@ export function BookDemoButton({
   return (
     <Button asChild className={className} size={size} variant={variant}>
       <Link href={href}>
-        Book a demo <ArrowUpRight aria-hidden="true" size={18} />
+        Try the demo <ArrowUpRight aria-hidden="true" size={18} />
       </Link>
     </Button>
   );

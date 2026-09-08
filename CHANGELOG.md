@@ -6,6 +6,11 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
+- Wazely Color as a third product across the company hero, product grid,
+  desktop and mobile product navigation, and footer, with its free AI color
+  toolkit capabilities and product screenshot.
+- Product-aware knowledge-base destinations so the ERP page links directly to
+  ERP help while CRM continues to use the Enterprise knowledge base.
 - A company-level homepage that presents Wazely CRM and Wazely ERP as two
   available products with clear paths into each product experience.
 - Dedicated `/crm` and `/erp` product pages with route-specific metadata,
@@ -31,6 +36,11 @@ All notable changes to this project are documented in this file.
 
 ### Changed
 
+- Company messaging and product layouts now support three focused products,
+  including responsive three-column presentation on larger screens.
+- Demo calls to action now use the clearer "Try the demo" wording.
+- External product and knowledge-base links now open safely in a new tab where
+  appropriate.
 - Shared company, CRM, and ERP hero headings now use a smaller responsive type
   scale and wider measure to stay near two lines on desktop.
 - The ERP hero description now uses a wider desktop measure to avoid an

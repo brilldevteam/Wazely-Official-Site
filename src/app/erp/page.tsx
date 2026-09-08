@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 
 import { CapabilitySection } from "@/components/marketing/capability-section";
-import { FinalCta } from "@/components/marketing/cta-sections";
+import {
+  FinalCta,
+  KnowledgeBaseCta,
+} from "@/components/marketing/cta-sections";
 import { ErpHero } from "@/components/marketing/erp-hero";
 import { FeatureShowcase } from "@/components/marketing/feature-showcase";
 import { PricingSection } from "@/components/marketing/pricing-section";
@@ -113,12 +116,17 @@ export default function ErpPage() {
         plans={erpPricingPlans}
         demoHref={siteConfig.erpUrl}
       />
+      <KnowledgeBaseCta
+        title="Need help with Wazely ERP?"
+        description="Find setup guides for sales, quotations, invoices, purchases, payments, accounting, and business reporting."
+        href={siteConfig.erpKnowledgeBaseUrl}
+      />
       <FinalCta
         eyebrow="Wazely ERP"
         title="Bring financial and operational work into one clear workspace."
         primaryLabel="Open Wazely ERP"
         primaryHref={siteConfig.erpUrl}
-        secondaryLabel="Book a demo"
+        secondaryLabel="Try the demo"
         secondaryHref={siteConfig.erpUrl}
         id="erp-demo"
       />

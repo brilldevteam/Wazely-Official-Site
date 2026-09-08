@@ -59,6 +59,9 @@ export function MobileNavigation() {
                 key={product.href}
                 href={product.href}
                 onClick={() => setOpen(false)}
+                {...(product.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
                 className="text-navy hover:text-teal flex min-h-13 items-center border-b border-slate-200 pl-4 text-lg font-medium transition-colors focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 focus-visible:outline-none"
               >
                 {product.label}
@@ -86,7 +89,7 @@ export function MobileNavigation() {
             className="mt-auto w-full"
           >
             <Link href={siteConfig.demoUrl}>
-              Book a demo <ArrowUpRight aria-hidden="true" size={17} />
+              Try the demo <ArrowUpRight aria-hidden="true" size={17} />
             </Link>
           </Button>
         </Dialog.Content>

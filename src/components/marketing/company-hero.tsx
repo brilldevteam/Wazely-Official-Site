@@ -13,8 +13,8 @@ export function CompanyHero() {
         <p className="eyebrow justify-center">Wazely business software</p>
         <AnimatedHeroHeading
           words={[
-            "Two",
-            "connected",
+            "Three",
+            "focused",
             "products.",
             "One",
             "smarter",
@@ -23,11 +23,12 @@ export function CompanyHero() {
             "work.",
           ]}
           gradientWord="work."
-          ariaLabel="Two connected products. One smarter way to work."
+          ariaLabel="Three focused products. One smarter way to work."
         />
         <p className="hero-copy-reveal mx-auto mt-7 max-w-3xl text-[clamp(1.05rem,2vw,1.25rem)] leading-8 text-balance text-slate-600">
           Wazely brings customer relationships and everyday business operations
-          together through focused CRM and ERP products.
+          together with focused CRM and ERP products—plus a free AI color
+          toolkit for building your brand.
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button asChild variant="gradient" size="lg">
@@ -43,21 +44,24 @@ export function CompanyHero() {
           </Button>
         </div>
 
-        <div className="scroll-reveal-stagger mx-auto mt-14 grid max-w-6xl gap-5 text-left sm:mt-18 lg:grid-cols-2">
+        <div className="scroll-reveal-stagger mx-auto mt-14 grid max-w-6xl gap-5 text-left sm:mt-18 lg:grid-cols-3">
           {products.map((product) => (
             <Link
               key={product.slug}
               href={product.href}
+              {...(product.external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
               className="product-preview group overflow-hidden rounded-[24px] border border-slate-200 bg-white p-3 shadow-[0_30px_80px_-45px_rgba(15,29,53,.42)] transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-4 focus-visible:outline-none sm:p-4"
             >
               <div className="overflow-hidden rounded-[16px] border border-slate-200 bg-slate-50">
                 <Image
                   src={product.image}
                   alt={product.imageAlt}
-                  width={product.slug === "erp" ? 1920 : 1672}
-                  height={product.slug === "erp" ? 950 : 940}
+                  width={product.imageWidth}
+                  height={product.imageHeight}
                   priority
-                  sizes="(max-width: 1024px) 94vw, 44vw"
+                  sizes="(max-width: 1024px) 94vw, 30vw"
                   className="aspect-[1.9/1] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.015]"
                 />
               </div>
