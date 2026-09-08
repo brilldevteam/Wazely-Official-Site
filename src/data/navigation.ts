@@ -5,19 +5,16 @@ export const productNavigation = [
     label: "Wazely CRM",
     description: "Customer conversations, campaigns, and automation",
     href: "/crm",
-    external: false,
   },
   {
     label: "Wazely ERP",
     description: "Sales, finance, accounting, and operations",
     href: "/erp",
-    external: false,
   },
   {
     label: "Wazely Color",
     description: "Free AI brand color suite — palettes, boards, exports",
     href: "https://color.wazely.io/",
-    external: true,
   },
 ] as const;
 

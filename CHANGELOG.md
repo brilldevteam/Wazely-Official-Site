@@ -39,8 +39,8 @@ All notable changes to this project are documented in this file.
 - Company messaging and product layouts now support three focused products,
   including responsive three-column presentation on larger screens.
 - Demo calls to action now use the clearer "Try the demo" wording.
-- External product and knowledge-base links now open safely in a new tab where
-  appropriate.
+- Knowledge-base links open safely in a new tab, while Wazely Color product
+  links keep visitors in the current tab for a continuous product journey.
 - Shared company, CRM, and ERP hero headings now use a smaller responsive type
   scale and wider measure to stay near two lines on desktop.
 - The ERP hero description now uses a wider desktop measure to avoid an

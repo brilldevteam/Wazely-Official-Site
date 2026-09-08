@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { BrandLogo } from "@/components/layout/brand-logo";
 import { footerGroups } from "@/data/navigation";
+import { siteConfig } from "@/data/site";
 
 export function SiteFooter() {
   return (
@@ -21,7 +22,9 @@ export function SiteFooter() {
               <h2 className="text-navy text-sm font-semibold">{group.title}</h2>
               <ul className="mt-4 space-y-3">
                 {group.links.map((link) => {
-                  const external = link.href.startsWith("http");
+                  const external =
+                    link.href.startsWith("http") &&
+                    link.href !== siteConfig.colorUrl;
                   return (
                     <li key={link.label}>
                       <Link

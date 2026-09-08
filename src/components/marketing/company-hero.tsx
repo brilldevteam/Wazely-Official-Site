@@ -49,9 +49,6 @@ export function CompanyHero() {
             <Link
               key={product.slug}
               href={product.href}
-              {...(product.external
-                ? { target: "_blank", rel: "noopener noreferrer" }
-                : {})}
               className="product-preview group overflow-hidden rounded-[24px] border border-slate-200 bg-white p-3 shadow-[0_30px_80px_-45px_rgba(15,29,53,.42)] transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-4 focus-visible:outline-none sm:p-4"
             >
               <div className="overflow-hidden rounded-[16px] border border-slate-200 bg-slate-50">

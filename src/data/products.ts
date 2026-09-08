@@ -13,7 +13,6 @@ export type Product = {
   imageAlt: string;
   capabilities: readonly string[];
   available: boolean;
-  external?: boolean;
 };
 
 export const products: Product[] = [
@@ -68,6 +67,5 @@ export const products: Product[] = [
       "Wazely Color brand toolkit with an AI-generated colour palette board",
     capabilities: ["AI palettes", "Brand boards", "Contrast", "Exports"],
     available: true,
-    external: true,
   },
 ];

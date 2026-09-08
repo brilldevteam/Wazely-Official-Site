@@ -65,9 +65,6 @@ export function ProductsSection() {
               </div>
               <Link
                 href={product.href}
-                {...(product.external
-                  ? { target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
                 className="text-teal mt-10 inline-flex items-center gap-2 self-start rounded-sm text-sm font-semibold focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-4 focus-visible:outline-none"
               >
                 {product.cta} <ArrowUpRight aria-hidden="true" size={17} />
