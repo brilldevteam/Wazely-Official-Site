@@ -5,6 +5,7 @@ export const navigation = [
   { label: "Wazely CRM", sectionId: "wazely-crm" },
   { label: "Solutions", sectionId: "capabilities" },
   { label: "Products", sectionId: "products" },
+  { label: "Pricing", sectionId: "pricing" },
   { label: "Resources", sectionId: "resources" },
   { label: "Knowledge Base", href: siteConfig.knowledgeBaseUrl },
 ] as const;

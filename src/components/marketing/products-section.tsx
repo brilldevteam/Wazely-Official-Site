@@ -1,19 +1,20 @@
 import { ArrowUpRight, Plus } from "lucide-react";
 import Link from "next/link";
 
+import { ScrollReveal } from "@/components/marketing/scroll-reveal";
 import { products } from "@/data/products";
 
 export function ProductsSection() {
   return (
     <section id="products" className="section-space scroll-mt-24 bg-white">
       <div className="page-shell">
-        <div className="max-w-2xl">
+        <ScrollReveal className="max-w-2xl">
           <p className="eyebrow">Wazely products</p>
           <h2 className="section-title mt-4">
             Built as a family, starting with CRM.
           </h2>
-        </div>
-        <div className="mt-12 grid gap-5 lg:grid-cols-2">
+        </ScrollReveal>
+        <div className="scroll-reveal-stagger mt-12 grid gap-5 lg:grid-cols-2">
           {products.map((product) => (
             <article
               key={product.name}

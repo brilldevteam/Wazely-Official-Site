@@ -68,8 +68,8 @@ export function MobileNavigation() {
             size="lg"
             className="mt-auto w-full"
           >
-            <Link href={siteConfig.crmUrl}>
-              Explore Wazely CRM <ArrowUpRight aria-hidden="true" size={17} />
+            <Link href={siteConfig.demoUrl}>
+              Book a demo <ArrowUpRight aria-hidden="true" size={17} />
             </Link>
           </Button>
         </Dialog.Content>

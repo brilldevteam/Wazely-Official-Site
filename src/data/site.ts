@@ -4,6 +4,7 @@ export const siteConfig = {
   description:
     "Wazely builds practical connected business software. Explore Wazely CRM for customer conversations, contacts, campaigns, automation, and teamwork.",
   crmUrl: "https://crm.wazely.io",
+  demoUrl: "https://crm.wazely.io",
   knowledgeBaseUrl: "https://help.wazely.io/enterprise/",
   socialLinks: {},
   legalLinks: {},

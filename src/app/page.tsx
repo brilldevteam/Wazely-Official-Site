@@ -8,6 +8,7 @@ import { FeatureShowcase } from "@/components/marketing/feature-showcase";
 import { Hero } from "@/components/marketing/hero";
 import { ProductOverview } from "@/components/marketing/product-overview";
 import { ProductsSection } from "@/components/marketing/products-section";
+import { PricingSection } from "@/components/marketing/pricing-section";
 
 const features = [
   {
@@ -27,7 +28,7 @@ const features = [
   },
   {
     eyebrow: "Campaigns and analytics",
-    title: "Create broadcasts, then follow the delivery story.",
+    title: "Create broadcasts and track delivery.",
     description:
       "Build template-based WhatsApp messaging campaigns and keep sent, delivered, read, and failed activity visible in the same workspace.",
     points: [
@@ -42,7 +43,7 @@ const features = [
   },
   {
     eyebrow: "Visual automation",
-    title: "Build practical workflows without writing code.",
+    title: "Build practical workflows without code.",
     description:
       "Connect triggers and customer-facing actions on a visual canvas to make repeatable work easier to see, manage, and improve.",
     points: [
@@ -69,6 +70,7 @@ export default function Home() {
       ))}
       <CapabilityGrid />
       <ProductsSection />
+      <PricingSection />
       <KnowledgeBaseCta />
       <FinalCta />
     </>

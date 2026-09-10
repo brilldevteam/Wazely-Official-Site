@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 
 import { BrowserFrame } from "@/components/marketing/browser-frame";
+import { ScrollReveal } from "@/components/marketing/scroll-reveal";
 import { cn } from "@/lib/utils";
 
 type FeatureShowcaseProps = {
@@ -32,14 +33,14 @@ export function FeatureShowcase({
             : "lg:grid-cols-[.8fr_1.2fr]",
         )}
       >
-        <BrowserFrame
-          src={image}
-          alt={imageAlt}
-          width={1680}
-          height={944}
+        <ScrollReveal
+          direction={imagePosition}
           className={cn(imagePosition === "right" && "lg:order-2")}
-        />
-        <div
+        >
+          <BrowserFrame src={image} alt={imageAlt} width={1680} height={944} />
+        </ScrollReveal>
+        <ScrollReveal
+          direction={imagePosition === "left" ? "right" : "left"}
           className={cn("max-w-xl", imagePosition === "right" && "lg:order-1")}
         >
           <p className="eyebrow">{eyebrow}</p>
@@ -58,7 +59,7 @@ export function FeatureShowcase({
               </li>
             ))}
           </ul>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
