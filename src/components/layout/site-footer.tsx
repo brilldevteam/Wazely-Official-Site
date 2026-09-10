@@ -10,9 +10,9 @@ export function SiteFooter() {
         <div className="max-w-sm">
           <BrandLogo />
           <p className="mt-5 text-sm leading-6 text-slate-600">
-            Wazely creates connected software that helps teams handle customer
-            relationships, communication, workflows, and everyday operational
-            work.
+            Wazely creates connected CRM and ERP software that helps teams
+            handle customer relationships, communication, finance, and everyday
+            operational work.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">

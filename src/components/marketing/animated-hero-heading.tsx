@@ -1,8 +1,15 @@
-import type { CSSProperties } from "react";
+import { Fragment, type CSSProperties } from "react";
 
 import { cn } from "@/lib/utils";
 
-const words = ["Turn", "every", "customer", "conversation", "into", "growth."];
+const defaultWords = [
+  "Turn",
+  "every",
+  "customer",
+  "conversation",
+  "into",
+  "growth.",
+];
 
 const growthColors = [
   { light: "#08aebc", dark: "#45e4ed" },
@@ -14,46 +21,67 @@ const growthColors = [
   { light: "#b25cdb", dark: "#ed8ee7" },
 ];
 
-export function AnimatedHeroHeading() {
+type AnimatedHeroHeadingProps = {
+  words?: string[];
+  gradientWord?: string;
+  ariaLabel?: string;
+  className?: string;
+  breakBeforeWord?: string;
+};
+
+export function AnimatedHeroHeading({
+  words = defaultWords,
+  gradientWord = "growth.",
+  ariaLabel = "Turn every customer conversation into growth.",
+  className,
+  breakBeforeWord,
+}: AnimatedHeroHeadingProps = {}) {
   let characterIndex = 0;
 
   return (
     <h1
-      aria-label="Turn every customer conversation into growth."
-      className="text-navy hero-heading mx-auto mt-6 max-w-5xl text-[clamp(2.65rem,6.5vw,5.75rem)] leading-[.96] font-semibold tracking-[-.055em] text-balance"
+      aria-label={ariaLabel}
+      className={cn(
+        "text-navy hero-heading mx-auto mt-6 max-w-[1280px] text-[clamp(2.4rem,5vw,4.5rem)] leading-[.98] font-semibold tracking-[-.05em] text-balance",
+        className,
+      )}
     >
       {words.map((word) => {
-        const isGrowth = word === "growth.";
+        const isGradient = word === gradientWord;
 
         return (
-          <span
-            aria-hidden="true"
-            className={cn("hero-word", isGrowth && "hero-word-gradient")}
-            key={word}
-          >
-            {[...word].map((character, wordCharacterIndex) => {
-              const index = characterIndex++;
-              const color = isGrowth
-                ? growthColors[wordCharacterIndex]
-                : undefined;
+          <Fragment key={word}>
+            {word === breakBeforeWord ? (
+              <br aria-hidden="true" className="hidden sm:block" />
+            ) : null}
+            <span
+              aria-hidden="true"
+              className={cn("hero-word", isGradient && "hero-word-gradient")}
+            >
+              {[...word].map((character, wordCharacterIndex) => {
+                const index = characterIndex++;
+                const color = isGradient
+                  ? growthColors[wordCharacterIndex % growthColors.length]
+                  : undefined;
 
-              return (
-                <span
-                  className="hero-char"
-                  key={`${word}-${index}`}
-                  style={
-                    {
-                      "--char-delay": `${100 + index * 27}ms`,
-                      "--char-color": color?.light,
-                      "--char-color-dark": color?.dark,
-                    } as CSSProperties
-                  }
-                >
-                  {character}
-                </span>
-              );
-            })}
-          </span>
+                return (
+                  <span
+                    className="hero-char"
+                    key={`${word}-${index}`}
+                    style={
+                      {
+                        "--char-delay": `${100 + index * 27}ms`,
+                        "--char-color": color?.light,
+                        "--char-color-dark": color?.dark,
+                      } as CSSProperties
+                    }
+                  >
+                    {character}
+                  </span>
+                );
+              })}
+            </span>
+          </Fragment>
         );
       })}
     </h1>

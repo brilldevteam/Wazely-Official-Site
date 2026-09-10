@@ -12,6 +12,8 @@ type FeatureShowcaseProps = {
   image: string;
   imageAlt: string;
   imagePosition?: "left" | "right";
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 export function FeatureShowcase({
@@ -22,6 +24,8 @@ export function FeatureShowcase({
   image,
   imageAlt,
   imagePosition = "left",
+  imageWidth = 1680,
+  imageHeight = 944,
 }: FeatureShowcaseProps) {
   return (
     <section className="overflow-hidden pt-8 pb-20 sm:py-16 lg:py-[clamp(5rem,9vw,8.5rem)]">
@@ -44,7 +48,12 @@ export function FeatureShowcase({
             imagePosition === "right" ? "lg:order-2" : "lg:order-1",
           )}
         >
-          <BrowserFrame src={image} alt={imageAlt} width={1680} height={944} />
+          <BrowserFrame
+            src={image}
+            alt={imageAlt}
+            width={imageWidth}
+            height={imageHeight}
+          />
         </ScrollReveal>
         <ScrollReveal
           direction={imagePosition === "left" ? "right" : "left"}
