@@ -60,7 +60,7 @@ export const products: Product[] = [
     href: "https://color.wazely.io/",
     appUrl: "https://color.wazely.io/",
     cta: "Open Wazely Color",
-    image: "/screenshots/color-hero.png",
+    image: "/screenshots/color-hero-light.png",
     imageWidth: 1200,
     imageHeight: 630,
     imageAlt:
