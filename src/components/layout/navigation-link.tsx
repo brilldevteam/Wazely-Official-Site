@@ -54,8 +54,18 @@ export function NavigationLink({
     );
   }
 
+  let href: string = item.href;
+  if ("hrefByPathPrefix" in item && item.hrefByPathPrefix) {
+    for (const [prefix, url] of Object.entries(item.hrefByPathPrefix)) {
+      if (pathname === prefix || pathname.startsWith(`${prefix}/`)) {
+        href = url;
+        break;
+      }
+    }
+  }
+
   return (
-    <Link href={item.href} className={className} onClick={onSelect}>
+    <Link href={href} className={className} onClick={onSelect}>
       {item.label}
     </Link>
   );

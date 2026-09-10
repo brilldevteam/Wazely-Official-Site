@@ -86,13 +86,14 @@ export default function CrmPage() {
       <KnowledgeBaseCta
         title="Need help with Wazely CRM?"
         description="Find practical guides for setup, WhatsApp connections, contacts, templates, campaigns, automation, and troubleshooting."
+        href={siteConfig.knowledgeBaseUrl}
       />
       <FinalCta
         eyebrow="Wazely CRM"
         title="Bring your customer work into one connected place."
         primaryLabel="Open Wazely CRM"
         primaryHref={siteConfig.crmUrl}
-        secondaryLabel="Book a demo"
+        secondaryLabel="Try the demo"
         secondaryHref={siteConfig.demoUrl}
         id="crm-demo"
       />

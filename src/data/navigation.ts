@@ -11,13 +11,25 @@ export const productNavigation = [
     description: "Sales, finance, accounting, and operations",
     href: "/erp",
   },
+  {
+    label: "Wazely Color",
+    description: "Free AI brand color suite — palettes, boards, exports",
+    href: "https://color.wazely.io/",
+  },
 ] as const;
 
 export const navigation = [
   { label: "Solutions", sectionId: "solutions" },
   { label: "Resources", sectionId: "resources" },
   { label: "About", sectionId: "about" },
-  { label: "Knowledge Base", href: siteConfig.knowledgeBaseUrl },
+  {
+    label: "Knowledge Base",
+    href: siteConfig.knowledgeBaseUrl,
+    // Point at the product-specific knowledge base when on that product page.
+    hrefByPathPrefix: {
+      "/erp": siteConfig.erpKnowledgeBaseUrl,
+    },
+  },
 ] as const;
 
 export type NavigationItem = (typeof navigation)[number];
@@ -28,6 +40,7 @@ export const footerGroups = [
     links: [
       { label: "Wazely CRM", href: "/crm" },
       { label: "Wazely ERP", href: "/erp" },
+      { label: "Wazely Color", href: "https://color.wazely.io/" },
     ],
   },
   {

@@ -5,8 +5,10 @@ export const siteConfig = {
     "Wazely builds connected CRM and ERP software for customer relationships, finance, sales, operations, and everyday business work.",
   crmUrl: "https://crm.wazely.io",
   erpUrl: "https://erp.wazely.io",
+  colorUrl: "https://color.wazely.io/",
   demoUrl: "https://crm.wazely.io",
-  knowledgeBaseUrl: "https://help.wazely.io/enterprise/",
+  knowledgeBaseUrl: "https://help.wazely.io/enterprise/index.html",
+  erpKnowledgeBaseUrl: "https://help.wazely.io/erp/",
   socialLinks: {},
   legalLinks: {},
 } as const;

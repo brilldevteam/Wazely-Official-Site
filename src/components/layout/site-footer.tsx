@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { BrandLogo } from "@/components/layout/brand-logo";
 import { footerGroups } from "@/data/navigation";
+import { siteConfig } from "@/data/site";
 
 export function SiteFooter() {
   return (
@@ -20,16 +21,24 @@ export function SiteFooter() {
             <div key={group.title}>
               <h2 className="text-navy text-sm font-semibold">{group.title}</h2>
               <ul className="mt-4 space-y-3">
-                {group.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      className="hover:text-teal text-sm text-slate-600 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:outline-none"
-                      href={link.href}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {group.links.map((link) => {
+                  const external =
+                    link.href.startsWith("http") &&
+                    link.href !== siteConfig.colorUrl;
+                  return (
+                    <li key={link.label}>
+                      <Link
+                        className="hover:text-teal text-sm text-slate-600 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:outline-none"
+                        href={link.href}
+                        {...(external
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
