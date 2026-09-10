@@ -23,6 +23,9 @@ All notable changes to this project are documented in this file.
 - About section's "Book a demo" button moved under the heading and
   right-aligned.
 - Primary button variant is now legible in dark mode.
+- Feature showcase sections now keep their copy above the product screenshot
+  on mobile, with tighter internal spacing and clearer separation between
+  consecutive sections while preserving the desktop alternating layout.
 
 ### Fixed
 
