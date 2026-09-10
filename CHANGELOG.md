@@ -40,6 +40,8 @@ All notable changes to this project are documented in this file.
 
 ### Changed
 
+- Wazely Color product previews now use the light ChromaForge hero artwork
+  across the homepage hero strip and product catalog.
 - Homepage product cards now use a centered two-column catalog layout with
   larger product previews, and the company hero copy is more compact.
 - Company messaging and product layouts now support three focused products,
