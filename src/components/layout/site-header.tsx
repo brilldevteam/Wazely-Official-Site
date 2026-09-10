@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 import { BrandLogo } from "@/components/layout/brand-logo";
+import { KnowledgeBaseMenu } from "@/components/layout/knowledge-base-menu";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { NavigationLink } from "@/components/layout/navigation-link";
 import { ProductMenu } from "@/components/layout/product-menu";
@@ -33,6 +34,7 @@ export function SiteHeader() {
               className="hover:text-navy rounded-full px-3 py-2 text-[13px] font-medium text-slate-600 transition-colors hover:bg-slate-100 focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:outline-none"
             />
           ))}
+          <KnowledgeBaseMenu />
         </nav>
         <div className="flex shrink-0 items-center gap-1.5">
           <ThemeToggle />

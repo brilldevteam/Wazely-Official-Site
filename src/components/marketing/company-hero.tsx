@@ -13,8 +13,7 @@ export function CompanyHero() {
         <p className="eyebrow justify-center">Wazely business software</p>
         <AnimatedHeroHeading
           words={[
-            "Three",
-            "focused",
+            "Focused",
             "products.",
             "One",
             "smarter",
@@ -23,9 +22,10 @@ export function CompanyHero() {
             "work.",
           ]}
           gradientWord="work."
-          ariaLabel="Three focused products. One smarter way to work."
+          breakBeforeWord="One"
+          ariaLabel="Focused products. One smarter way to work."
         />
-        <p className="hero-copy-reveal mx-auto mt-7 max-w-3xl text-[clamp(1.05rem,2vw,1.25rem)] leading-8 text-balance text-slate-600">
+        <p className="hero-copy-reveal mx-auto mt-7 max-w-3xl text-[1rem] leading-7 text-balance text-slate-600">
           Wazely brings customer relationships and everyday business operations
           together with focused CRM and ERP products—plus a free AI color
           toolkit for building your brand.
