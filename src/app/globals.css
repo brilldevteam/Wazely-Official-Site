@@ -399,6 +399,12 @@ button {
   background: linear-gradient(145deg, #fff 28%, #fdf2f8 70%, #fff7ed);
 }
 
+.product-card-soon {
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background: #fbfcfe;
+}
+
 .pricing-card {
   box-shadow: 0 24px 65px -48px rgba(15, 29, 53, 0.48);
 }
@@ -758,6 +764,11 @@ button {
 .dark .product-card-color {
   border-color: rgba(244, 114, 182, 0.42);
   background: linear-gradient(145deg, #0b1526 30%, #2b1526);
+}
+
+.dark .product-card-soon {
+  border-color: #33445c;
+  background: #0d1829;
 }
 
 .dark .pricing-card-featured {

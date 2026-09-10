@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { MouseEvent } from "react";
 
@@ -18,55 +17,36 @@ export function NavigationLink({
   onSelect,
 }: NavigationLinkProps) {
   const pathname = usePathname();
+  const isHomepage = pathname === "/";
+  const sectionId = item.sectionId;
+  const href = `${isHomepage ? "" : "/"}#${sectionId}`;
 
-  if ("sectionId" in item) {
-    const isHomepage = pathname === "/";
-    const sectionId = item.sectionId;
-    const href = `${isHomepage ? "" : "/"}#${sectionId}`;
-
-    function handleSectionClick(event: MouseEvent<HTMLAnchorElement>) {
-      if (!isHomepage) {
-        onSelect?.();
-        return;
-      }
-
-      event.preventDefault();
+  function handleSectionClick(event: MouseEvent<HTMLAnchorElement>) {
+    if (!isHomepage) {
       onSelect?.();
-      window.history.replaceState(null, "", `#${sectionId}`);
+      return;
+    }
 
+    event.preventDefault();
+    onSelect?.();
+    window.history.replaceState(null, "", `#${sectionId}`);
+
+    window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
-        window.requestAnimationFrame(() => {
-          document.getElementById(sectionId)?.scrollIntoView({
-            behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
-              .matches
-              ? "auto"
-              : "smooth",
-            block: "start",
-          });
+        document.getElementById(sectionId)?.scrollIntoView({
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
+            .matches
+            ? "auto"
+            : "smooth",
+          block: "start",
         });
       });
-    }
-
-    return (
-      <a href={href} className={className} onClick={handleSectionClick}>
-        {item.label}
-      </a>
-    );
-  }
-
-  let href: string = item.href;
-  if ("hrefByPathPrefix" in item && item.hrefByPathPrefix) {
-    for (const [prefix, url] of Object.entries(item.hrefByPathPrefix)) {
-      if (pathname === prefix || pathname.startsWith(`${prefix}/`)) {
-        href = url;
-        break;
-      }
-    }
+    });
   }
 
   return (
-    <Link href={href} className={className} onClick={onSelect}>
+    <a href={href} className={className} onClick={handleSectionClick}>
       {item.label}
-    </Link>
+    </a>
   );
 }

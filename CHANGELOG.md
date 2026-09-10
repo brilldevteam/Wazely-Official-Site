@@ -6,6 +6,10 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
+- Separate Wazely CRM and Wazely ERP destinations in the desktop and mobile
+  Knowledge Base navigation, with descriptive product-specific menu entries.
+- A responsive "Coming soon" card that previews the next Wazely product in
+  both light and dark modes.
 - Wazely Color as a third product across the company hero, product grid,
   desktop and mobile product navigation, and footer, with its free AI color
   toolkit capabilities and product screenshot.
@@ -36,6 +40,8 @@ All notable changes to this project are documented in this file.
 
 ### Changed
 
+- Homepage product cards now use a centered two-column catalog layout with
+  larger product previews, and the company hero copy is more compact.
 - Company messaging and product layouts now support three focused products,
   including responsive three-column presentation on larger screens.
 - Demo calls to action now use the clearer "Try the demo" wording.

@@ -22,17 +22,22 @@ export const navigation = [
   { label: "Solutions", sectionId: "solutions" },
   { label: "Resources", sectionId: "resources" },
   { label: "About", sectionId: "about" },
-  {
-    label: "Knowledge Base",
-    href: siteConfig.knowledgeBaseUrl,
-    // Point at the product-specific knowledge base when on that product page.
-    hrefByPathPrefix: {
-      "/erp": siteConfig.erpKnowledgeBaseUrl,
-    },
-  },
 ] as const;
 
 export type NavigationItem = (typeof navigation)[number];
+
+export const knowledgeBaseNavigation = [
+  {
+    label: "Wazely CRM",
+    description: "Setup, WhatsApp, contacts, campaigns, and automation",
+    href: siteConfig.knowledgeBaseUrl,
+  },
+  {
+    label: "Wazely ERP",
+    description: "Sales, purchases, payments, accounting, and reporting",
+    href: siteConfig.erpKnowledgeBaseUrl,
+  },
+] as const;
 
 export const footerGroups = [
   {
