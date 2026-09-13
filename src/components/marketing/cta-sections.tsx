@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import { ScrollReveal } from "@/components/marketing/scroll-reveal";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/data/site";
 
 type KnowledgeBaseCtaProps = {
   title?: string;
@@ -14,8 +13,10 @@ type KnowledgeBaseCtaProps = {
 export function KnowledgeBaseCta({
   title = "Guidance for every Wazely workspace.",
   description = "Find practical help for setting up Wazely products, organizing your workspace, and keeping everyday work moving.",
-  href = siteConfig.knowledgeBaseUrl,
+  href = "/knowledge-base",
 }: KnowledgeBaseCtaProps = {}) {
+  const external = href.startsWith("http");
+
   return (
     <section id="resources" className="section-space bg-soft scroll-mt-24">
       <div className="page-shell">
@@ -35,7 +36,12 @@ export function KnowledgeBaseCta({
             </p>
           </div>
           <Button asChild variant="secondary" size="lg">
-            <Link href={href} target="_blank" rel="noopener noreferrer">
+            <Link
+              href={href}
+              {...(external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+            >
               Visit the Knowledge Base{" "}
               <ArrowRight aria-hidden="true" size={17} />
             </Link>

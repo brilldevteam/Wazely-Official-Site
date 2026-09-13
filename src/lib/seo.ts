@@ -5,7 +5,7 @@ import { getSiteUrl, siteConfig } from "@/data/site";
 type PageMetadataOptions = {
   title: string;
   description: string;
-  path: "/crm" | "/erp";
+  path: "/crm" | "/erp" | "/knowledge-base";
 };
 
 export function createPageMetadata({

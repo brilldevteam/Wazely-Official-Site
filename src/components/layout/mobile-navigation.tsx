@@ -85,9 +85,13 @@ export function MobileNavigation() {
                 className="text-navy hover:text-teal flex min-h-13 items-center border-b border-slate-200 text-lg font-medium transition-colors focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 focus-visible:outline-none"
               />
             ))}
-            <span className="text-teal mt-6 flex min-h-11 items-center text-xs font-semibold tracking-[.14em] uppercase">
+            <Link
+              href="/knowledge-base"
+              onClick={() => setOpen(false)}
+              className="text-teal mt-6 flex min-h-11 items-center text-xs font-semibold tracking-[.14em] uppercase"
+            >
               Knowledge Base
-            </span>
+            </Link>
             {knowledgeBaseNavigation.map((item) => (
               <Link
                 key={item.href}
