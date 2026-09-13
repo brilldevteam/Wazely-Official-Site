@@ -65,8 +65,8 @@ export const products: Product[] = [
     appUrl: "https://color.wazely.io/",
     cta: "Open Wazely Color",
     image: "/screenshots/color-hero.png",
-    imageWidth: 1600,
-    imageHeight: 728,
+    imageWidth: 1200,
+    imageHeight: 630,
     imageAlt:
       "Wazely Color brand toolkit with an AI-generated colour palette board",
     capabilities: ["AI palettes", "Brand boards", "Contrast", "Exports"],
