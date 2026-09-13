@@ -53,7 +53,7 @@ export const footerGroups = [
   },
   {
     title: "Resources",
-    links: [{ label: "Knowledge Base", href: siteConfig.knowledgeBaseUrl }],
+    links: [{ label: "Knowledge Base", href: "/knowledge-base" }],
   },
   {
     title: "Company",

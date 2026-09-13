@@ -414,6 +414,16 @@ button {
   box-shadow: 0 30px 75px -45px rgba(8, 174, 188, 0.45);
 }
 
+.knowledge-card-crm {
+  border-color: rgba(16, 185, 129, 0.32);
+  background: linear-gradient(150deg, #fff 45%, #effcf8 100%);
+}
+
+.knowledge-card-erp {
+  border-color: rgba(139, 92, 246, 0.28);
+  background: linear-gradient(150deg, #fff 45%, #f5f2ff 100%);
+}
+
 .final-cta {
   background:
     radial-gradient(
@@ -775,6 +785,16 @@ button {
   border-color: rgba(45, 212, 215, 0.45);
   background: linear-gradient(155deg, #0b1526 25%, #0b282e 100%);
   box-shadow: 0 30px 80px -48px rgba(45, 212, 215, 0.55);
+}
+
+.dark .knowledge-card-crm {
+  border-color: rgba(52, 211, 153, 0.3);
+  background: linear-gradient(150deg, #0b1526 45%, #0b2826 100%);
+}
+
+.dark .knowledge-card-erp {
+  border-color: rgba(167, 139, 250, 0.32);
+  background: linear-gradient(150deg, #0b1526 45%, #1b1633 100%);
 }
 
 .dark .brand-logo-base {

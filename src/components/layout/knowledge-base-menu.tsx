@@ -52,6 +52,13 @@ export function KnowledgeBaseMenu() {
         />
       </summary>
       <div className="product-menu absolute top-full left-1/2 mt-3 w-80 -translate-x-1/2 rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_24px_70px_-28px_rgba(15,29,53,.45)]">
+        <Link
+          href="/knowledge-base"
+          onClick={closeMenu}
+          className="text-teal block rounded-xl px-4 py-3 text-xs font-semibold tracking-[.12em] uppercase hover:bg-slate-50"
+        >
+          View all knowledge bases
+        </Link>
         {knowledgeBaseNavigation.map((item) => (
           <Link
             key={item.href}
