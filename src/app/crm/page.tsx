@@ -9,20 +9,32 @@ import { FeatureShowcase } from "@/components/marketing/feature-showcase";
 import { Hero } from "@/components/marketing/hero";
 import { PricingSection } from "@/components/marketing/pricing-section";
 import { ProductOverview } from "@/components/marketing/product-overview";
+import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/data/site";
+import { createPageMetadata, createSoftwareApplicationJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Wazely CRM",
-  description:
-    "Connect customer conversations, contacts, campaigns, automation, and team collaboration with Wazely CRM.",
-  alternates: { canonical: "/crm" },
-  openGraph: {
-    title: "Wazely CRM | Connected Customer Work",
-    description:
-      "A connected workspace for customer conversations, campaigns, contacts, automation, and teamwork.",
-    url: "/crm",
-  },
-};
+const description =
+  "Manage WhatsApp customer conversations, contacts, campaigns, automation, and team collaboration with Wazely CRM for growing GCC businesses.";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "WhatsApp CRM for Customer Conversations",
+  description,
+  path: "/crm",
+});
+
+const crmJsonLd = createSoftwareApplicationJsonLd({
+  name: "Wazely CRM",
+  description,
+  path: "/crm",
+  appUrl: siteConfig.crmUrl,
+  features: [
+    "Shared WhatsApp inbox",
+    "Contact management and segmentation",
+    "Broadcast campaigns and reporting",
+    "Visual automation workflows",
+    "Team assignment and collaboration",
+  ],
+});
 
 const crmFeatures = [
   {
@@ -76,6 +88,7 @@ const crmFeatures = [
 export default function CrmPage() {
   return (
     <>
+      <JsonLd data={crmJsonLd} />
       <Hero />
       <ProductOverview />
       {crmFeatures.map((feature) => (

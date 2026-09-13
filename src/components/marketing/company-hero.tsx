@@ -44,7 +44,7 @@ export function CompanyHero() {
           </Button>
         </div>
 
-        <div className="scroll-reveal-stagger mx-auto mt-14 grid max-w-6xl gap-5 text-left sm:mt-18 lg:grid-cols-3">
+        <div className="scroll-reveal-stagger mt-14 grid gap-5 text-left sm:mt-18 lg:grid-cols-3">
           {products.map((product) => (
             <Link
               key={product.slug}
@@ -67,9 +67,20 @@ export function CompanyHero() {
                   <p className="text-teal text-xs font-semibold tracking-[.14em] uppercase">
                     {product.category}
                   </p>
-                  <h2 className="text-navy mt-1 text-xl font-semibold">
-                    {product.name}
-                  </h2>
+                  <div className="mt-1 flex flex-wrap items-center gap-2">
+                    <h2 className="text-navy text-xl font-semibold">
+                      {product.name}
+                    </h2>
+                    <span
+                      className={
+                        product.tier === "Pro"
+                          ? "inline-flex rounded-full bg-violet-600 px-2.5 py-1 text-[11px] font-semibold text-white dark:bg-violet-500"
+                          : "inline-flex rounded-full bg-cyan-100 px-2.5 py-1 text-[11px] font-semibold text-cyan-700 dark:text-cyan-300"
+                      }
+                    >
+                      {product.tier}
+                    </span>
+                  </div>
                 </div>
                 <span className="text-teal flex size-10 shrink-0 items-center justify-center rounded-full bg-cyan-50">
                   <ArrowUpRight aria-hidden="true" size={18} />

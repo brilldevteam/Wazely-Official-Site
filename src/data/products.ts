@@ -3,6 +3,7 @@ export type Product = {
   name: string;
   category: string;
   status: string;
+  tier: "Pro" | "Free";
   description: string;
   href: string;
   appUrl: string;
@@ -21,6 +22,7 @@ export const products: Product[] = [
     name: "Wazely CRM",
     category: "Customer relationships",
     status: "Available now",
+    tier: "Pro",
     description:
       "A connected CRM workspace for customer conversations, contacts, campaigns, automation, and collaborative customer management.",
     href: "/crm",
@@ -38,6 +40,7 @@ export const products: Product[] = [
     name: "Wazely ERP",
     category: "Business operations",
     status: "Available now",
+    tier: "Pro",
     description:
       "A practical ERP workspace for sales, purchases, payments, accounting, reporting, and daily business operations.",
     href: "/erp",
@@ -54,7 +57,8 @@ export const products: Product[] = [
     slug: "color",
     name: "Wazely Color",
     category: "Design toolkit",
-    status: "Free",
+    status: "Available now",
+    tier: "Free",
     description:
       "A free, AI-powered brand color suite: generate palettes from a description, build professional brand boards, check WCAG contrast, craft gradients, and export to CSS, Tailwind, Figma, SwiftUI, and more.",
     href: "https://color.wazely.io/",

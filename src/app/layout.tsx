@@ -5,7 +5,9 @@ import "./globals.css";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getSiteUrl, siteConfig } from "@/data/site";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
 const monaSans = localFont({
   src: "./mona-sans.woff2",
@@ -22,15 +24,41 @@ export const metadata: Metadata = {
     template: "%s | Wazely",
   },
   description: siteConfig.description,
+  applicationName: siteConfig.companyName,
+  authors: [{ name: siteConfig.companyName, url: "/" }],
+  creator: siteConfig.companyName,
+  publisher: siteConfig.companyName,
+  category: "business software",
   alternates: { canonical: "/" },
+  manifest: "/manifest.webmanifest",
   icons: { icon: "/wazely-favicon.png", apple: "/wazely-favicon.png" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
+    locale: siteConfig.locale,
     url: "/",
     siteName: "Wazely",
     title: siteConfig.title,
     description: siteConfig.description,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export default function RootLayout({
@@ -46,6 +74,12 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [organizationJsonLd, websiteJsonLd],
+          }}
+        />
         <a className="skip-link" href="#main-content">
           Skip to content
         </a>

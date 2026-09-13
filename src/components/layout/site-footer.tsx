@@ -15,6 +15,19 @@ export function SiteFooter() {
             handle customer relationships, communication, finance, and everyday
             operational work.
           </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            {Object.entries(siteConfig.socialLinks).map(([network, href]) => (
+              <Link
+                key={network}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal rounded-sm text-sm font-semibold text-slate-600 capitalize transition-colors focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:outline-none"
+              >
+                {network}
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
           {footerGroups.map((group) => (
