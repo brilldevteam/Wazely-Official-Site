@@ -9,8 +9,7 @@ export function ProductsSection() {
   return (
     <section id="products" className="section-space scroll-mt-24 bg-white">
       <div className="page-shell">
-        {/* Match the width of the homepage product-preview strip (max-w-6xl). */}
-        <div className="mx-auto max-w-6xl">
+        <div>
           <ScrollReveal className="max-w-4xl">
             <p className="eyebrow">Wazely products</p>
             <h2 className="section-title mt-4">
@@ -40,10 +39,21 @@ export function ProductsSection() {
                     />
                   </div>
                   <div className="mt-8">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800">
-                      <CheckCircle2 aria-hidden="true" size={14} />
-                      {product.status}
-                    </span>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800">
+                        <CheckCircle2 aria-hidden="true" size={14} />
+                        {product.status}
+                      </span>
+                      <span
+                        className={
+                          product.tier === "Pro"
+                            ? "inline-flex rounded-full bg-violet-600 px-3 py-1 text-xs font-semibold text-white dark:bg-violet-500"
+                            : "inline-flex rounded-full bg-cyan-100 px-3 py-1 text-xs font-semibold text-cyan-700 dark:text-cyan-300"
+                        }
+                      >
+                        {product.tier}
+                      </span>
+                    </div>
                     <p className="mt-3 text-xs font-semibold tracking-[.12em] text-slate-500 uppercase">
                       {product.category}
                     </p>

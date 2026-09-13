@@ -63,9 +63,18 @@ export function MobileNavigation() {
                 key={product.href}
                 href={product.href}
                 onClick={() => setOpen(false)}
-                className="text-navy hover:text-teal flex min-h-13 items-center border-b border-slate-200 pl-4 text-lg font-medium transition-colors focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 focus-visible:outline-none"
+                className="text-navy hover:text-teal flex min-h-13 items-center justify-between gap-3 border-b border-slate-200 pl-4 text-lg font-medium transition-colors focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 focus-visible:outline-none"
               >
-                {product.label}
+                <span>{product.label}</span>
+                <span
+                  className={
+                    product.tier === "Pro"
+                      ? "rounded-full bg-violet-600 px-2.5 py-1 text-[10px] font-semibold text-white dark:bg-violet-500"
+                      : "rounded-full bg-cyan-100 px-2.5 py-1 text-[10px] font-semibold text-cyan-700 dark:text-cyan-300"
+                  }
+                >
+                  {product.tier}
+                </span>
               </Link>
             ))}
             {navigation.map((item) => (

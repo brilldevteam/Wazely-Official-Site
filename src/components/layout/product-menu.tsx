@@ -66,8 +66,19 @@ export function ProductMenu() {
             onClick={closeMenu}
             className="block rounded-xl px-4 py-3 transition-colors hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:outline-none"
           >
-            <span className="text-navy block text-sm font-semibold">
-              {product.label}
+            <span className="flex items-center gap-2">
+              <span className="text-navy text-sm font-semibold">
+                {product.label}
+              </span>
+              <span
+                className={
+                  product.tier === "Pro"
+                    ? "rounded-full bg-violet-600 px-2 py-0.5 text-[10px] font-semibold text-white dark:bg-violet-500"
+                    : "rounded-full bg-cyan-100 px-2 py-0.5 text-[10px] font-semibold text-cyan-700 dark:text-cyan-300"
+                }
+              >
+                {product.tier}
+              </span>
             </span>
             <span className="mt-1 block text-xs leading-5 text-slate-500">
               {product.description}

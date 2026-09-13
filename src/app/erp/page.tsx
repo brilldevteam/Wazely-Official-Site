@@ -9,22 +9,34 @@ import { ErpHero } from "@/components/marketing/erp-hero";
 import { FeatureShowcase } from "@/components/marketing/feature-showcase";
 import { PricingSection } from "@/components/marketing/pricing-section";
 import { ProductOverviewPanel } from "@/components/marketing/product-overview-panel";
+import { JsonLd } from "@/components/seo/json-ld";
 import { erpCapabilities } from "@/data/product-capabilities";
 import { erpPricingPlans } from "@/data/pricing";
 import { siteConfig } from "@/data/site";
+import { createPageMetadata, createSoftwareApplicationJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Wazely ERP",
-  description:
-    "Connect sales, purchases, payments, accounting, reporting, and daily business operations with Wazely ERP.",
-  alternates: { canonical: "/erp" },
-  openGraph: {
-    title: "Wazely ERP | Connected Business Operations",
-    description:
-      "A practical ERP workspace for sales, finance, accounting, payments, reporting, and operational work.",
-    url: "/erp",
-  },
-};
+const description =
+  "Connect sales, purchasing, invoicing, payments, accounting, and operational reporting with Wazely ERP for growing GCC businesses.";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "ERP Software for Finance and Operations",
+  description,
+  path: "/erp",
+});
+
+const erpJsonLd = createSoftwareApplicationJsonLd({
+  name: "Wazely ERP",
+  description,
+  path: "/erp",
+  appUrl: siteConfig.erpUrl,
+  features: [
+    "Sales quotations and invoices",
+    "Purchasing and vendor management",
+    "Payments and vouchers",
+    "Accounting controls",
+    "Business and financial reporting",
+  ],
+});
 
 const erpFeatures = [
   {
@@ -77,6 +89,7 @@ const erpFeatures = [
 export default function ErpPage() {
   return (
     <>
+      <JsonLd data={erpJsonLd} />
       <ErpHero />
       <ProductOverviewPanel
         id="wazely-erp"

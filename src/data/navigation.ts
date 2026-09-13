@@ -3,16 +3,19 @@ import { siteConfig } from "@/data/site";
 export const productNavigation = [
   {
     label: "Wazely CRM",
+    tier: "Pro",
     description: "Customer conversations, campaigns, and automation",
     href: "/crm",
   },
   {
     label: "Wazely ERP",
+    tier: "Pro",
     description: "Sales, finance, accounting, and operations",
     href: "/erp",
   },
   {
     label: "Wazely Color",
+    tier: "Free",
     description: "Free AI brand color suite — palettes, boards, exports",
     href: "https://color.wazely.io/",
   },
