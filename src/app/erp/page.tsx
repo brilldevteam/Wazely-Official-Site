@@ -84,6 +84,66 @@ const erpFeatures = [
     imageAlt: "Wazely ERP business and financial reports",
     imagePosition: "left" as const,
   },
+  {
+    eyebrow: "Purchasing",
+    title: "Track every vendor bill from draft to paid.",
+    description:
+      "Record vendor bills against a warehouse and item lines, post them, and follow draft, partial, paid, and overdue status with a clear vendor and invoice trail.",
+    points: [
+      "Vendor bill creation",
+      "Draft and posted status",
+      "Partial and overdue tracking",
+      "Import and bulk upload",
+    ],
+    image: "/screenshots/erp/purchase-invoices.png",
+    imageAlt: "Wazely ERP purchase invoices and bills management screen",
+    imagePosition: "right" as const,
+  },
+  {
+    eyebrow: "Payables",
+    title: "Pay vendors and keep a clean voucher trail.",
+    description:
+      "Allocate payments against outstanding bills, choose the paying bank account, and generate a voucher for every vendor payment you record.",
+    points: [
+      "Outstanding bill allocation",
+      "Bank account selection",
+      "Voucher generation",
+      "Multi-currency support",
+    ],
+    image: "/screenshots/erp/vendor-payments.png",
+    imageAlt: "Wazely ERP vendor payments management screen",
+    imagePosition: "left" as const,
+  },
+  {
+    eyebrow: "Catalog and inventory",
+    title: "Keep one shared catalog behind every document.",
+    description:
+      "Maintain products and services with SKU, sale and purchase price, category, and unit, then track quantity on hand by warehouse so stock stays accurate.",
+    points: [
+      "Products and services",
+      "SKU and pricing",
+      "Category and unit setup",
+      "Warehouse stock tracking",
+    ],
+    image: "/screenshots/erp/product-items.png",
+    imageAlt: "Wazely ERP product and service catalog management screen",
+    imagePosition: "right" as const,
+  },
+  {
+    eyebrow: "Receivables",
+    title: "Match every payment to the right invoice.",
+    description:
+      "Load a customer's outstanding invoices, allocate what they paid, and record the receiving bank account, with unused amounts kept as a usable deposit.",
+    points: [
+      "Invoice-level allocation",
+      "Bank account recording",
+      "Deposit balance tracking",
+      "Multi-currency support",
+    ],
+    image: "/screenshots/erp/payment-received.png",
+    imageAlt: "Wazely ERP payment received and customer receipts screen",
+    imagePosition: "left" as const,
+  },
 ];
 
 export default function ErpPage() {

@@ -16,7 +16,7 @@ export const productNavigation = [
   {
     label: "Wazely Color",
     tier: "Free",
-    description: "Free AI brand color suite — palettes, boards, exports",
+    description: "Free AI brand color suite: palettes, boards, exports",
     href: "https://color.wazely.io/",
   },
 ] as const;

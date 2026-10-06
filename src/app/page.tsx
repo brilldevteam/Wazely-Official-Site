@@ -1,27 +1,30 @@
-import { CapabilitySection } from "@/components/marketing/capability-section";
 import { CompanyHero } from "@/components/marketing/company-hero";
 import { CompanyIntro } from "@/components/marketing/company-intro";
+import { ConnectedWorkflow } from "@/components/marketing/connected-workflow";
 import {
   FinalCta,
   KnowledgeBaseCta,
 } from "@/components/marketing/cta-sections";
+import { FaqSection } from "@/components/marketing/faq-section";
+import { IntegrationsRow } from "@/components/marketing/integrations-row";
+import { NarrativeReveal } from "@/components/marketing/narrative-reveal";
 import { ProductsSection } from "@/components/marketing/products-section";
-import { companyCapabilities } from "@/data/product-capabilities";
+import { SolutionsShowcase } from "@/components/marketing/solutions-showcase";
+import { TestimonialsSection } from "@/components/marketing/testimonials-section";
 
 export default function Home() {
   return (
     <>
       <CompanyHero />
+      <IntegrationsRow />
       <ProductsSection />
-      <CapabilitySection
-        id="solutions"
-        eyebrow="Connected business software"
-        title="Customer work and business operations, clearly connected."
-        description="Wazely gives teams focused tools for the relationships and operations that keep a business moving—without forcing everything into one oversized product."
-        items={companyCapabilities}
-      />
+      <SolutionsShowcase />
+      <NarrativeReveal />
+      <ConnectedWorkflow />
       <KnowledgeBaseCta />
       <CompanyIntro />
+      <TestimonialsSection />
+      <FaqSection />
       <FinalCta />
     </>
   );

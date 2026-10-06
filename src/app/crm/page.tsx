@@ -83,6 +83,51 @@ const crmFeatures = [
       "Wazely CRM visual automation builder with connected workflow steps",
     imagePosition: "left" as const,
   },
+  {
+    eyebrow: "Contacts and segmentation",
+    title: "Turn a contact list into a ready audience.",
+    description:
+      "Add contacts one at a time or import a CSV, extend records with custom fields and tags, then build reusable segments that feed straight into campaigns and automation.",
+    points: [
+      "Manual entry and CSV import",
+      "Custom fields and tags",
+      "Reusable segments",
+      "Channel and source tracking",
+    ],
+    image: "/screenshots/crm-contacts-directory.png",
+    imageAlt: "Wazely CRM contact directory with channel source and tags",
+    imagePosition: "right" as const,
+  },
+  {
+    eyebrow: "Teams and permissions",
+    title: "Give every agent the right amount of access.",
+    description:
+      "Organize agents into teams, assign roles, and control what each person can view, create, update, or manage, enforced consistently across the workspace.",
+    points: [
+      "Teams and agent accounts",
+      "Role-based permissions",
+      "Per-agent phone visibility",
+      "Owner-inherited subscription",
+    ],
+    image: "/screenshots/crm-agents.png",
+    imageAlt: "Wazely CRM agents list with team and role assignments",
+    imagePosition: "left" as const,
+  },
+  {
+    eyebrow: "Message templates",
+    title: "Keep every channel's templates in one library.",
+    description:
+      "Create and manage structured message templates for WhatsApp, Telegram, Facebook, and Instagram from one place, ready to use in campaigns and automation.",
+    points: [
+      "WhatsApp, Telegram, Facebook, Instagram",
+      "Reusable across campaigns",
+      "Meta review and sync status",
+      "Shared template library",
+    ],
+    image: "/screenshots/crm-message-templates.png",
+    imageAlt: "Wazely CRM message template configuration across channels",
+    imagePosition: "right" as const,
+  },
 ];
 
 export default function CrmPage() {

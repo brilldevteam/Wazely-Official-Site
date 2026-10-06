@@ -3,10 +3,26 @@ import { Cable, MessageCircleMore, Network, Workflow } from "lucide-react";
 import { BookDemoButton } from "@/components/marketing/book-demo-button";
 
 const pillars = [
-  { label: "Customer relationships", icon: Network },
-  { label: "Communication", icon: MessageCircleMore },
-  { label: "Business workflows", icon: Workflow },
-  { label: "Everyday operations", icon: Cable },
+  {
+    label: "Customer relationships",
+    description: "Conversations, contacts, and campaigns in one workspace.",
+    icon: Network,
+  },
+  {
+    label: "Communication",
+    description: "WhatsApp handled by a team, not one shared phone.",
+    icon: MessageCircleMore,
+  },
+  {
+    label: "Business workflows",
+    description: "Quotations and invoices connected to real accounting.",
+    icon: Workflow,
+  },
+  {
+    label: "Everyday operations",
+    description: "Stock, payments, and reports kept out of spreadsheets.",
+    icon: Cable,
+  },
 ];
 
 export function CompanyIntro() {
@@ -25,21 +41,30 @@ export function CompanyIntro() {
           </div>
           <div>
             <p className="section-copy max-w-2xl">
-              Wazely creates connected business software that helps teams bring
-              customer relationships, communication, finance, and daily
-              operations together. Wazely CRM and Wazely ERP are focused
-              products designed to grow with the way businesses work.
+              Most growing GCC businesses run on WhatsApp Business,
+              spreadsheets, and whatever accounting tool came first. Wazely
+              replaces that patchwork with two connected products: a
+              WhatsApp-native CRM for customer conversations and campaigns,
+              and an ERP for quotations, invoicing, and accounting. Built for
+              teams across Qatar, Saudi Arabia, the UAE, Kuwait, Bahrain, and
+              Oman, with a free AI color toolkit included for building your
+              brand.
             </p>
             <div className="scroll-reveal-stagger mt-9 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200">
-              {pillars.map(({ label, icon: Icon }) => (
+              {pillars.map(({ label, description, icon: Icon }) => (
                 <div
                   key={label}
                   className="flex min-h-28 flex-col justify-between bg-white p-5 sm:min-h-32 sm:p-6"
                 >
                   <Icon aria-hidden="true" className="text-teal" size={21} />
-                  <span className="text-navy mt-7 text-sm font-semibold sm:text-base">
-                    {label}
-                  </span>
+                  <div className="mt-7">
+                    <span className="text-navy text-sm font-semibold sm:text-base">
+                      {label}
+                    </span>
+                    <p className="mt-1.5 text-xs leading-5 text-slate-500">
+                      {description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

@@ -26,9 +26,8 @@ export function CompanyHero() {
           ariaLabel="Focused products. One smarter way to work."
         />
         <p className="hero-copy-reveal mx-auto mt-7 max-w-3xl text-[1rem] leading-7 text-balance text-slate-600">
-          Wazely brings customer relationships and everyday business operations
-          together with focused CRM and ERP products—plus a free AI color
-          toolkit for building your brand.
+          A WhatsApp-native CRM, an ERP for sales and accounting, and a free
+          AI color toolkit, built for growing businesses across the GCC.
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button asChild variant="gradient" size="lg">

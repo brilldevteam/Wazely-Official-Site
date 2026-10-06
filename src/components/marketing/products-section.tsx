@@ -89,7 +89,7 @@ export function ProductsSection() {
                 <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
                   <Image
                     src="/screenshots/coming-soon.png"
-                    alt="Coming soon — the next Wazely product"
+                    alt="Coming soon: the next Wazely product"
                     width={1600}
                     height={842}
                     sizes="(max-width: 1024px) 94vw, 46vw"
