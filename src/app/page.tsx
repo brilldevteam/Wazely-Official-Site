@@ -1,6 +1,7 @@
 import { CompanyHero } from "@/components/marketing/company-hero";
 import { CompanyIntro } from "@/components/marketing/company-intro";
 import { ConnectedWorkflow } from "@/components/marketing/connected-workflow";
+import { ContactSection } from "@/components/marketing/contact-section";
 import {
   FinalCta,
   KnowledgeBaseCta,
@@ -26,6 +27,7 @@ export default function Home() {
       <TestimonialsSection />
       <FaqSection />
       <FinalCta />
+      <ContactSection />
     </>
   );
 }

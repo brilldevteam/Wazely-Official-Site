@@ -3,8 +3,8 @@ import { workflowSteps } from "@/data/connected-workflow";
 
 export function ConnectedWorkflow() {
   return (
-    <section className="section-space bg-soft">
-      <div className="page-shell">
+    <section className="grid-texture section-space bg-soft">
+      <div className="page-shell relative z-10">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <h2 className="section-title">
             From a WhatsApp message to a paid invoice.
@@ -22,7 +22,7 @@ export function ConnectedWorkflow() {
           {workflowSteps.map((item) => (
             <div key={item.step} className="relative">
               <div className="flex items-center gap-3">
-                <span className="text-teal flex size-9 shrink-0 items-center justify-center rounded-full bg-cyan-50 text-sm font-bold">
+                <span className="glow-border glow-border-active text-teal flex size-9 shrink-0 items-center justify-center rounded-full bg-cyan-50 text-sm font-bold">
                   {item.step}
                 </span>
                 {item.step % 3 !== 0 && (

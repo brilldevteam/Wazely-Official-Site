@@ -14,9 +14,16 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: siteConfig.language,
     icons: [
       {
-        src: "/wazely-favicon.png",
-        sizes: "any",
+        src: "/wazely-icon-192.png",
+        sizes: "192x192",
         type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/wazely-favicon.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "any",
       },
     ],
   };

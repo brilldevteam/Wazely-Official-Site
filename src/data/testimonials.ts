@@ -26,4 +26,19 @@ export const testimonials: readonly Testimonial[] = [
     name: "Customer name",
     role: "Role, company",
   },
+  {
+    quote: "Add a real customer quote here.",
+    name: "Customer name",
+    role: "Role, company",
+  },
+  {
+    quote: "Add a real customer quote here.",
+    name: "Customer name",
+    role: "Role, company",
+  },
+  {
+    quote: "Add a real customer quote here.",
+    name: "Customer name",
+    role: "Role, company",
+  },
 ] as const;

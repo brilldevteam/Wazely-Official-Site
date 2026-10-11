@@ -74,14 +74,14 @@ export function FinalCta({
   return (
     <section id={id} className="bg-soft scroll-mt-24 pb-18 sm:pb-24 lg:pb-30">
       <div className="page-shell">
-        <ScrollReveal className="final-cta overflow-hidden rounded-[30px] px-6 py-16 text-center text-white sm:px-10 sm:py-20">
-          <p className="text-xs font-semibold tracking-[.2em] text-cyan-100 uppercase">
+        <ScrollReveal className="final-cta grid-texture overflow-hidden rounded-[30px] px-6 py-16 text-center text-white sm:px-10 sm:py-20">
+          <p className="relative z-10 text-xs font-semibold tracking-[.2em] text-cyan-100 uppercase">
             {eyebrow}
           </p>
-          <h2 className="mx-auto mt-5 max-w-4xl text-[clamp(2.1rem,4vw,3.6rem)] leading-[1.04] font-semibold tracking-[-.04em] text-balance">
+          <h2 className="relative z-10 mx-auto mt-5 max-w-4xl text-[clamp(2.1rem,4vw,3.6rem)] leading-[1.04] font-semibold tracking-[-.04em] text-balance">
             {title}
           </h2>
-          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="relative z-10 mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
               asChild
               variant="secondary"

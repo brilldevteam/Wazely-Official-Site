@@ -8,8 +8,9 @@ import { products } from "@/data/products";
 
 export function CompanyHero() {
   return (
-    <section className="hero-surface overflow-hidden pt-16 pb-18 sm:pt-22 sm:pb-24 lg:pt-26 lg:pb-28">
-      <div className="page-shell text-center">
+    <section className="hero-surface grid-texture relative overflow-hidden pt-20 pb-20 sm:pt-28 sm:pb-28 lg:pt-32 lg:pb-32">
+      <div className="hero-halo" aria-hidden="true" />
+      <div className="page-shell relative z-10 text-center">
         <p className="eyebrow justify-center">Wazely business software</p>
         <AnimatedHeroHeading
           words={[
@@ -24,6 +25,7 @@ export function CompanyHero() {
           gradientWord="work."
           breakBeforeWord="One"
           ariaLabel="Focused products. One smarter way to work."
+          className="text-[clamp(2.75rem,6.5vw,5.75rem)]"
         />
         <p className="hero-copy-reveal mx-auto mt-7 max-w-3xl text-[1rem] leading-7 text-balance text-slate-600">
           A WhatsApp-native CRM, an ERP for sales and accounting, and a free
@@ -43,12 +45,12 @@ export function CompanyHero() {
           </Button>
         </div>
 
-        <div className="scroll-reveal-stagger mt-14 grid gap-5 text-left sm:mt-18 lg:grid-cols-3">
+        <div className="scroll-reveal-stagger mt-16 grid gap-6 text-left sm:mt-20 lg:grid-cols-3">
           {products.map((product) => (
             <Link
               key={product.slug}
               href={product.href}
-              className="product-preview group overflow-hidden rounded-[24px] border border-slate-200 bg-white p-3 shadow-[0_30px_80px_-45px_rgba(15,29,53,.42)] transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-4 focus-visible:outline-none sm:p-4"
+              className="product-preview glow-border group overflow-hidden rounded-[24px] border border-slate-200 bg-white p-3 shadow-[0_30px_80px_-45px_rgba(15,29,53,.42)] transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-4 focus-visible:outline-none sm:p-4"
             >
               <div className="overflow-hidden rounded-[16px] border border-slate-200 bg-slate-50">
                 <Image

@@ -118,6 +118,111 @@ button {
   perspective: 1000px;
 }
 
+/* Shared "futuristic" texture for sections past the (untouched) hero. Reuses
+   the hero's own cyan -> violet gradient tokens so the rest of the page
+   escalates the existing identity instead of introducing a clashing one. */
+.grid-texture {
+  position: relative;
+}
+
+.grid-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(10, 143, 145, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 143, 145, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(
+    ellipse 70% 60% at 50% 0%,
+    #000 40%,
+    transparent 100%
+  );
+}
+
+.dark .grid-texture::before {
+  background-image:
+    linear-gradient(rgba(53, 212, 216, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53, 212, 216, 0.1) 1px, transparent 1px);
+}
+
+/* Soft, extruded "neumorphic" treatment for small UI chips: a light
+   highlight + a muted dark shadow on opposite corners, instead of a hard
+   border, so pills read as soft tactile buttons rather than flat outlines. */
+.neu-chip {
+  box-shadow:
+    inset 2px 2px 5px rgba(15, 29, 53, 0.06),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.85);
+}
+
+.dark .neu-chip {
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.35),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.04);
+}
+
+.final-cta.grid-texture::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 80% 90% at 50% 30%, #000 40%, transparent 100%);
+}
+
+.glow-border {
+  position: relative;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    rgba(8, 174, 188, 0.55),
+    rgba(120, 89, 232, 0.4) 55%,
+    rgba(178, 92, 219, 0.5)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.glow-border:hover::before,
+.glow-border-active::before {
+  opacity: 1;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-glow {
+    animation: none;
+  }
+}
+
 .hero-word {
   display: inline-block;
   margin-right: 0.22em;
@@ -458,13 +563,13 @@ button {
 }
 
 .product-card-erp {
-  border-color: #c4b5fd;
-  background: linear-gradient(145deg, #fff 30%, #f5f3ff);
+  border-color: #d8b4fe;
+  background: linear-gradient(145deg, #fff 30%, #faf5ff);
 }
 
 .product-card-color {
-  border-color: #f9a8d4;
-  background: linear-gradient(145deg, #fff 28%, #fdf2f8 70%, #fff7ed);
+  border-color: #fdba74;
+  background: linear-gradient(145deg, #fff 28%, #fff7ed 70%, #fff1e6);
 }
 
 .product-card-soon {
@@ -843,13 +948,13 @@ button {
 }
 
 .dark .product-card-erp {
-  border-color: rgba(167, 139, 250, 0.42);
-  background: linear-gradient(145deg, #0b1526 30%, #211a3a);
+  border-color: rgba(192, 132, 252, 0.42);
+  background: linear-gradient(145deg, #0b1526 30%, #241a3d);
 }
 
 .dark .product-card-color {
-  border-color: rgba(244, 114, 182, 0.42);
-  background: linear-gradient(145deg, #0b1526 30%, #2b1526);
+  border-color: rgba(251, 146, 60, 0.42);
+  background: linear-gradient(145deg, #0b1526 30%, #2b1a12);
 }
 
 .dark .product-card-soon {

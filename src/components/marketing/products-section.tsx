@@ -7,8 +7,11 @@ import { products } from "@/data/products";
 
 export function ProductsSection() {
   return (
-    <section id="products" className="section-space scroll-mt-24 bg-white">
-      <div className="page-shell">
+    <section
+      id="products"
+      className="grid-texture section-space scroll-mt-24 bg-white"
+    >
+      <div className="page-shell relative z-10">
         <div>
           <ScrollReveal className="max-w-4xl">
             <p className="eyebrow">Wazely products</p>
@@ -25,7 +28,7 @@ export function ProductsSection() {
             {products.map((product) => (
               <article
                 key={product.name}
-                className={`product-card product-card-active product-card-${product.slug}`}
+                className={`product-card product-card-active product-card-${product.slug} glow-border glow-border-active`}
               >
                 <div>
                   <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
@@ -41,6 +44,10 @@ export function ProductsSection() {
                   <div className="mt-8">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800">
+                        <span
+                          aria-hidden="true"
+                          className="pulse-glow size-1.5 rounded-full bg-emerald-600"
+                        />
                         <CheckCircle2 aria-hidden="true" size={14} />
                         {product.status}
                       </span>

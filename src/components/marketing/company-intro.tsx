@@ -1,6 +1,7 @@
 import { Cable, MessageCircleMore, Network, Workflow } from "lucide-react";
 
 import { BookDemoButton } from "@/components/marketing/book-demo-button";
+import { ConnectedDiagram } from "@/components/marketing/connected-diagram";
 
 const pillars = [
   {
@@ -35,7 +36,10 @@ export function CompanyIntro() {
             <h2 className="section-title mt-4 max-w-xl">
               Practical software that keeps work connected.
             </h2>
-            <div className="mt-10 flex flex-1 items-center justify-start lg:translate-y-10">
+            <div className="mt-8 flex flex-1 items-center">
+              <ConnectedDiagram />
+            </div>
+            <div className="mt-6 flex items-center justify-center">
               <BookDemoButton />
             </div>
           </div>
