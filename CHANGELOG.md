@@ -83,6 +83,8 @@ All notable changes to this project are documented in this file.
 
 ### Fixed
 
+- Centered the visible icon-and-copy column within each mobile proof row,
+  keeping the dividers and row content aligned to the same section center.
 - The Wazely symbol keeps its color in the dark header while the wordmark
   switches to white; the mobile theme control now sits beside the menu button.
 - Mobile solution tabs now expand only the active section label while keeping

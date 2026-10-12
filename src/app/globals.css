@@ -1103,7 +1103,7 @@ button {
 @media (max-width: 650px) {
   .hv-proof { padding: 2.8rem 0 3.2rem; }
   .hv-proof-highlights { display: grid; grid-template-columns: 1fr; gap: 0; width: min(100% - 2rem, 265px); margin-inline: auto; }
-  .hv-proof-item { display: grid; grid-template-columns: 30px 1fr; gap: .9rem; min-height: 4.7rem; padding: .7rem 0; }
+  .hv-proof-item { display: grid; grid-template-columns: 30px minmax(0, 170px); justify-content: center; gap: .9rem; min-height: 4.7rem; padding: .7rem 0; }
   .hv-proof-item + .hv-proof-item { border-left: 0; border-top: 1px solid #e2e4e5; }
   .hv-proof-item strong { font-size: 1.2rem; }
   .hv-proof-item p span { font-size: .75rem; }
