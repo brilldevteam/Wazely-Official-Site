@@ -1322,6 +1322,7 @@ button {
   .hv-solutions-overline { flex-wrap: wrap; font-size: .82rem; }
   .hv-solutions-heading h2 { font-size: clamp(2.6rem, 10vw, 3.8rem); }
   .hv-solutions-heading > p:last-child { font-size: 1rem; }
+  .hv-solutions { margin-top: 0; }
   .hv-tab-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hv-tab { min-height: 4.75rem; padding: .7rem .35rem; font-size: .8rem; }
   .hv-tab-icon { width: 1.15rem; height: 1.15rem; }

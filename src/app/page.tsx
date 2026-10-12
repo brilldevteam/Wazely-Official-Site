@@ -100,11 +100,11 @@ export default function Home() {
 
     <section id="solutions" className="hv-solutions-section hv-space">
       <div className="page-shell">
-        <ScrollReveal className="hv-center-heading hv-solutions-heading">
+        <div className="hv-center-heading hv-solutions-heading">
           <p className="hv-solutions-overline"><span className="hv-mini-marks" aria-hidden="true"><span>C</span><span>E</span><span>W</span></span><strong>CRM · ERP · COLOR</strong> Built for the work behind your business</p>
           <h2>Specialized solutions for the work that moves your business.</h2>
           <p>Explore the tools Wazely offers for customer conversations, daily operations, and brand design.</p>
-        </ScrollReveal>
+        </div>
         <HomeSolutionTabs />
       </div>
     </section>
