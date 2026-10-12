@@ -105,17 +105,6 @@ export function HomeSolutionTabs() {
   const tabsRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const tabs = tabsRef.current;
-    if (!tabs || window.innerWidth > 650) return;
-    const selected = tabs.querySelectorAll<HTMLElement>(".hv-tab")[active];
-    if (!selected) return;
-    tabs.scrollTo({
-      left: selected.offsetLeft - (tabs.clientWidth - selected.clientWidth) / 2,
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
-    });
-  }, [active]);
-
-  useEffect(() => {
     let frame = 0;
     const updateActive = () => {
       frame = 0;
@@ -165,6 +154,7 @@ export function HomeSolutionTabs() {
               key={section.id}
               href={`#solution-${section.id}`}
               className={active === index ? "hv-tab is-active" : "hv-tab"}
+              aria-label={section.label}
               aria-current={active === index ? "location" : undefined}
               onClick={(event) => goToSection(event, index)}
             >

@@ -83,6 +83,10 @@ All notable changes to this project are documented in this file.
 
 ### Fixed
 
+- The Wazely symbol keeps its color in the dark header while the wordmark
+  switches to white; the mobile theme control now sits beside the menu button.
+- Mobile solution tabs now expand only the active section label while keeping
+  the other two as icon buttons, updating as each story reaches the sticky tabs.
 - Centered the three homepage proof highlights as a consistent column on mobile.
 - Dark-mode navigation now keeps the logo, links, mobile menu button, and
   desktop appearance toggle visible against the header.

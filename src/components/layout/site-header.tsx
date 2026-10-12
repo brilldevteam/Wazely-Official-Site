@@ -43,6 +43,7 @@ export function SiteHeader() {
             </Link>
             <Link className="wh-header-secondary" href="/#contact">Get in touch</Link>
           </div>
+          <ThemeToggle className="wh-theme-toggle inline-flex lg:hidden" />
           <MobileNavigation />
         </div>
       </div>

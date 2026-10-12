@@ -11,7 +11,6 @@ import {
   productNavigation,
 } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
-import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { NavigationLink } from "@/components/layout/navigation-link";
 import { Button } from "@/components/ui/button";
 
@@ -105,12 +104,6 @@ export function MobileNavigation() {
               </Link>
             ))}
           </nav>
-          <div className="mt-7 flex items-center justify-between rounded-xl border border-slate-200 px-4 py-2">
-            <span className="text-sm font-medium text-slate-600">
-              Appearance
-            </span>
-            <ThemeToggle />
-          </div>
           <Button
             asChild
             variant="gradient"
