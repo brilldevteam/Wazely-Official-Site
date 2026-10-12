@@ -83,8 +83,9 @@ All notable changes to this project are documented in this file.
 
 ### Fixed
 
-- Removed the mobile gap above the solution tabs and the heading reveal motion
-  that made that gap change while scrolling.
+- Kept a consistent mobile gap above the solution tabs and stabilized the hero
+  and solution heights as mobile browser controls expand and collapse.
+- Prevented accidental text selection when swiping over the solutions heading.
 - Mobile solution tabs now scroll naturally into view from below before
   sticking beneath the main header, without appearing suddenly at the top.
 - Centered the visible icon-and-copy column within each mobile proof row,

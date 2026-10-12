@@ -1322,7 +1322,9 @@ button {
   .hv-solutions-overline { flex-wrap: wrap; font-size: .82rem; }
   .hv-solutions-heading h2 { font-size: clamp(2.6rem, 10vw, 3.8rem); }
   .hv-solutions-heading > p:last-child { font-size: 1rem; }
-  .hv-solutions { margin-top: 0; }
+  .hv-hero { min-height: calc(100svh - 72px); }
+  .hv-solutions-heading { user-select: none; touch-action: pan-y; }
+  .hv-solutions { margin-top: 1rem; }
   .hv-tab-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hv-tab { min-height: 4.75rem; padding: .7rem .35rem; font-size: .8rem; }
   .hv-tab-icon { width: 1.15rem; height: 1.15rem; }
@@ -1468,7 +1470,7 @@ body:has(.video-home) .site-header { position: sticky !important; top: 0 !import
   .hv-sticky-tabs .hv-tab-icon { flex: 0 0 auto; width: 1.2rem; height: 1.2rem; }
   .hv-sticky-tabs .hv-tab span { max-width: 0; overflow: hidden; opacity: 0; visibility: hidden; text-overflow: ellipsis; transition: max-width .3s ease, opacity .2s ease, visibility .2s; }
   .hv-sticky-tabs .hv-tab.is-active span { max-width: 220px; opacity: 1; visibility: visible; }
-  .hv-solution-story { min-height: 100dvh; padding: 5.5rem 1rem 4rem; scroll-margin-top: 139px; }
+  .hv-solution-story { min-height: 0; padding: 5.5rem 1rem 4rem; scroll-margin-top: 139px; }
   .hv-solution-content h3 { font-size: clamp(2.6rem, 9.5vw, 3.8rem); }
   .hv-solution-description { font-size: 1.03rem; }
   .hv-solution-content .hv-pill { margin-top: 2rem; }
