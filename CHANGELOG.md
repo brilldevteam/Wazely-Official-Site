@@ -83,6 +83,7 @@ All notable changes to this project are documented in this file.
 
 ### Fixed
 
+- Centered the three homepage proof highlights as a consistent column on mobile.
 - Dark-mode navigation now keeps the logo, links, mobile menu button, and
   desktop appearance toggle visible against the header.
 - The homepage contact form stays visually integrated with its light card in
