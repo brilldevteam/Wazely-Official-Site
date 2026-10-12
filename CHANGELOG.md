@@ -83,6 +83,10 @@ All notable changes to this project are documented in this file.
 
 ### Fixed
 
+- Dark-mode navigation now keeps the logo, links, mobile menu button, and
+  desktop appearance toggle visible against the header.
+- The homepage contact form stays visually integrated with its light card in
+  dark mode, without a contrasting inner panel or stray border.
 - Solution tab links account for the height of both navigation bars, so each
   selected story begins below them.
 - Scroll reveal motion now uses a consistent Intersection Observer fallback,

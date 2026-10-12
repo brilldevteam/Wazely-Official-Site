@@ -6,6 +6,7 @@ import { KnowledgeBaseMenu } from "@/components/layout/knowledge-base-menu";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { NavigationLink } from "@/components/layout/navigation-link";
 import { ProductMenu } from "@/components/layout/product-menu";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { navigation } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 
@@ -35,6 +36,7 @@ export function SiteHeader() {
           <KnowledgeBaseMenu />
         </nav>
         <div className="flex shrink-0 items-center gap-2">
+          <ThemeToggle className="wh-theme-toggle hidden lg:inline-flex" />
           <div className="hidden items-center gap-3 xl:flex">
             <Link className="wh-header-primary" href={siteConfig.demoUrl}>
               Try the demo <ArrowUpRight aria-hidden="true" size={17} />

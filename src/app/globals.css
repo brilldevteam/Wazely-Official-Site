@@ -1597,3 +1597,34 @@ body:has(.video-home) .site-header { position: sticky !important; top: 0 !import
   .hv-contact-form-wrap { padding: 1.5rem; border-radius: 20px; }
   .hv-contact-form-wrap form > .grid { grid-template-columns: 1fr; }
 }
+
+/* Keep the shared header legible in both themes. */
+.site-header .wh-theme-toggle { color: #202b25; }
+.site-header .wh-theme-toggle:hover { background: #edf4ee; }
+.dark .site-header { background: #111b17 !important; border-bottom-color: #34463b !important; color: #f7fbf8; }
+.dark .site-header .brand-logo-base { display: block !important; filter: brightness(0) invert(1); }
+.dark .site-header .brand-logo-mark { display: none !important; }
+.dark .site-header nav > a,
+.dark .site-header nav > button,
+.dark .site-header nav summary { color: #e9f1eb !important; }
+.dark .site-header nav a:hover,
+.dark .site-header nav summary:hover { background: #263a2c; }
+.dark .site-header .product-menu { background: #1b2a21; border-color: #3a5140; }
+.dark .site-header .product-menu a { color: #e9f1eb !important; }
+.dark .site-header .product-menu a:hover { background: #2b4031; }
+.dark .site-header .wh-theme-toggle,
+.dark .site-header button[aria-label="Open navigation menu"] { color: #f7fbf8; }
+.dark .site-header .wh-theme-toggle:hover,
+.dark .site-header button[aria-label="Open navigation menu"]:hover { background: #263a2c; }
+.dark .site-header .wh-header-primary { background: #bdebc5; color: #173322; }
+.dark .site-header .wh-header-secondary { background: #2b4031; color: #f7fbf8; }
+
+/* The homepage contact card stays light even when the shared form's dark classes apply. */
+.hv-contact-form-wrap form.glow-border::before { display: none; }
+.dark .hv-contact-form-wrap form { background: #fff; color: #17251c; }
+.dark .hv-contact-form-wrap form label,
+.dark .hv-contact-form-wrap form .text-navy { color: #17251c; }
+.dark .hv-contact-form-wrap form input,
+.dark .hv-contact-form-wrap form textarea { background: #f9fbf9; color: #17251c; border-color: #d7e2d9; }
+.dark .hv-contact-form-wrap form input::placeholder,
+.dark .hv-contact-form-wrap form textarea::placeholder { color: #819188; }
