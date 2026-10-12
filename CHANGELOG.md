@@ -83,7 +83,11 @@ All notable changes to this project are documented in this file.
 
 ### Fixed
 
-- Kept a consistent mobile gap above the solution tabs and stabilized the hero
+- Applied a logo-inspired purple dark theme throughout the homepage, including
+  the hero, solution stories, testimonials, and contact form.
+- Slowed the mobile navigation drawer and backdrop animation.
+- Matched the sticky solution tabs to the live mobile header height.
+- Increased the mobile gap above the solution tabs and stabilized the hero
   and solution heights as mobile browser controls expand and collapse.
 - Prevented accidental text selection when swiping over the solutions heading.
 - Mobile solution tabs now scroll naturally into view from below before

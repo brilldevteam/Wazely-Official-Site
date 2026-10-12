@@ -104,6 +104,31 @@ export function HomeSolutionTabs() {
   const [active, setActive] = useState(0);
   const tabsRef = useRef<HTMLElement>(null);
 
+  // Keep the sticky tab bar's offset locked to the header's real, live
+  // height instead of a hardcoded px value. On mobile the header's
+  // rendered height can shift by a few px during a scroll gesture (browser
+  // chrome collapsing, font swap, etc.); a hardcoded `top` that no longer
+  // matches the header's true height is what produces a brief gap or
+  // overlap between the tab bar and the content above it.
+  useEffect(() => {
+    const header = document.querySelector<HTMLElement>(".site-header");
+    if (!header) return;
+    const setHeaderHeightVar = () => {
+      document.documentElement.style.setProperty(
+        "--site-header-height",
+        `${header.getBoundingClientRect().height}px`,
+      );
+    };
+    setHeaderHeightVar();
+    const observer = new ResizeObserver(setHeaderHeightVar);
+    observer.observe(header);
+    window.addEventListener("resize", setHeaderHeightVar);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", setHeaderHeightVar);
+    };
+  }, []);
+
   useEffect(() => {
     let frame = 0;
     const updateActive = () => {
