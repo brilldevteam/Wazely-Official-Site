@@ -102,6 +102,7 @@ const solutionSections = [
 
 export function HomeSolutionTabs() {
   const [active, setActive] = useState(0);
+  const [isPinned, setIsPinned] = useState(false);
   const tabsRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -109,7 +110,9 @@ export function HomeSolutionTabs() {
     const updateActive = () => {
       frame = 0;
       const headerHeight = document.querySelector<HTMLElement>(".site-header")?.getBoundingClientRect().height ?? 0;
-      const activationLine = headerHeight + (tabsRef.current?.getBoundingClientRect().height ?? 76) + 12;
+      const tabsRect = tabsRef.current?.getBoundingClientRect();
+      const activationLine = headerHeight + (tabsRect?.height ?? 76) + 12;
+      setIsPinned(Boolean(tabsRect && tabsRect.top <= headerHeight + 1 && tabsRect.bottom > headerHeight));
       let current = 0;
       solutionSections.forEach((section, index) => {
         const element = document.getElementById(`solution-${section.id}`);
@@ -146,7 +149,7 @@ export function HomeSolutionTabs() {
 
   return (
     <div className="hv-solutions hv-scroll-solutions">
-      <nav ref={tabsRef} className="hv-tab-list hv-sticky-tabs" aria-label="Wazely solution sections">
+      <nav ref={tabsRef} className={`hv-tab-list hv-sticky-tabs${isPinned ? " is-pinned" : ""}`} aria-label="Wazely solution sections">
         {solutionSections.map((section, index) => {
           const Icon = section.icon;
           return (

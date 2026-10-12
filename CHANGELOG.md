@@ -83,6 +83,8 @@ All notable changes to this project are documented in this file.
 
 ### Fixed
 
+- Mobile solution tabs now appear when they reach their sticky position below
+  the main header, avoiding a clipped tab bar at the bottom of the viewport.
 - Centered the visible icon-and-copy column within each mobile proof row,
   keeping the dividers and row content aligned to the same section center.
 - The Wazely symbol keeps its color in the dark header while the wordmark
