@@ -6,6 +6,10 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
+- A redesigned homepage with solution stories for CRM, ERP, and Wazely Color,
+  illustrated product rows, a consultation callout, and clearly labeled sample
+  testimonials.
+- New product illustrations used by the homepage product family section.
 - Separate Wazely CRM and Wazely ERP destinations in the desktop and mobile
   Knowledge Base navigation, with descriptive product-specific menu entries.
 - A responsive "Coming soon" card that previews the next Wazely product in
@@ -40,6 +44,11 @@ All notable changes to this project are documented in this file.
 
 ### Changed
 
+- Homepage navigation, contact form presentation, and section typography now
+  follow the updated Wazely design; the main header remains visible above the
+  sticky solution tabs while visitors scroll or switch sections.
+- The homepage now moves from the four-step process directly into the FAQ,
+  consultation callout, testimonials, and contact section.
 - Wazely Color product previews now use the light ChromaForge hero artwork
   across the homepage hero strip and product catalog, served from a new asset
   URL so deployed sites do not reuse the previous dark preview from cache.
@@ -74,6 +83,8 @@ All notable changes to this project are documented in this file.
 
 ### Fixed
 
+- Solution tab links account for the height of both navigation bars, so each
+  selected story begins below them.
 - Scroll reveal motion now uses a consistent Intersection Observer fallback,
   ensuring all three CRM and all three ERP feature showcases animate when they
   enter the viewport even without full CSS scroll-timeline support.

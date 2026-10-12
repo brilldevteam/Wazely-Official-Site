@@ -16,7 +16,8 @@ export function ProductsSection() {
           <ScrollReveal className="max-w-4xl">
             <p className="eyebrow">Wazely products</p>
             <h2 className="section-title mt-4">
-              Focused products for connected business work.
+              Focused products for{" "}
+              <span className="gradient-text">connected business work.</span>
             </h2>
             <p className="section-copy mt-5">
               Choose the workspace that matches the work in front of you. CRM

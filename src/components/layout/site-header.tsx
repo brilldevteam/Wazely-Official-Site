@@ -6,8 +6,6 @@ import { KnowledgeBaseMenu } from "@/components/layout/knowledge-base-menu";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { NavigationLink } from "@/components/layout/navigation-link";
 import { ProductMenu } from "@/components/layout/product-menu";
-import { ThemeToggle } from "@/components/layout/theme-toggle";
-import { Button } from "@/components/ui/button";
 import { navigation } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
 
@@ -36,14 +34,12 @@ export function SiteHeader() {
           ))}
           <KnowledgeBaseMenu />
         </nav>
-        <div className="flex shrink-0 items-center gap-1.5">
-          <ThemeToggle />
-          <div className="hidden xl:block">
-            <Button asChild variant="gradient">
-              <Link href={siteConfig.demoUrl}>
-                Try the demo <ArrowUpRight aria-hidden="true" size={16} />
-              </Link>
-            </Button>
+        <div className="flex shrink-0 items-center gap-2">
+          <div className="hidden items-center gap-3 xl:flex">
+            <Link className="wh-header-primary" href={siteConfig.demoUrl}>
+              Try the demo <ArrowUpRight aria-hidden="true" size={17} />
+            </Link>
+            <Link className="wh-header-secondary" href="/#contact">Get in touch</Link>
           </div>
           <MobileNavigation />
         </div>

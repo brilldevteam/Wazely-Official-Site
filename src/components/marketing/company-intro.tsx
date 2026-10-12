@@ -34,7 +34,8 @@ export function CompanyIntro() {
           <div className="flex flex-col">
             <p className="eyebrow">About Wazely</p>
             <h2 className="section-title mt-4 max-w-xl">
-              Practical software that keeps work connected.
+              Practical software that{" "}
+              <span className="gradient-text">keeps work connected.</span>
             </h2>
             <div className="mt-8 flex flex-1 items-center">
               <ConnectedDiagram />

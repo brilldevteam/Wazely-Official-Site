@@ -55,12 +55,6 @@ export function SiteFooter() {
               </ul>
             </div>
           ))}
-          <div>
-            <h2 className="text-navy text-sm font-semibold">Legal</h2>
-            <p className="mt-4 text-sm leading-6 text-slate-500">
-              Legal links will appear here when available.
-            </p>
-          </div>
         </div>
       </div>
       <div className="page-shell mt-12 border-t border-slate-200 pt-6 text-sm text-slate-500">

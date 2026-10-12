@@ -7,7 +7,8 @@ export function ConnectedWorkflow() {
       <div className="page-shell relative z-10">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <h2 className="section-title">
-            From a WhatsApp message to a paid invoice.
+            From a WhatsApp message to{" "}
+            <span className="gradient-text">a paid invoice.</span>
           </h2>
           <p className="section-copy mt-5">
             Wazely CRM, ERP, and Color are built to hand off to each other,

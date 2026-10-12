@@ -8,10 +8,18 @@ import { products } from "@/data/products";
 
 export function CompanyHero() {
   return (
-    <section className="hero-surface grid-texture relative overflow-hidden pt-20 pb-20 sm:pt-28 sm:pb-28 lg:pt-32 lg:pb-32">
+    <section className="hero-surface relative overflow-hidden pt-24 pb-24 sm:pt-32 sm:pb-32 lg:pt-36 lg:pb-36">
       <div className="hero-halo" aria-hidden="true" />
       <div className="page-shell relative z-10 text-center">
-        <p className="eyebrow justify-center">Wazely business software</p>
+        <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 shadow-[0_8px_20px_-14px_rgba(15,29,53,.4)]">
+          <span
+            aria-hidden="true"
+            className="pulse-glow size-1.5 rounded-full bg-emerald-500"
+          />
+          <span className="text-navy text-xs font-semibold tracking-wide">
+            Wazely business software
+          </span>
+        </div>
         <AnimatedHeroHeading
           words={[
             "Focused",
@@ -32,7 +40,7 @@ export function CompanyHero() {
           AI color toolkit, built for growing businesses across the GCC.
         </p>
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button asChild variant="gradient" size="lg">
+          <Button asChild variant="primary" size="lg">
             <Link href="#products">
               Explore Wazely products <ArrowDown aria-hidden="true" size={17} />
             </Link>
@@ -45,12 +53,12 @@ export function CompanyHero() {
           </Button>
         </div>
 
-        <div className="scroll-reveal-stagger mt-16 grid gap-6 text-left sm:mt-20 lg:grid-cols-3">
+        <div className="scroll-reveal-stagger mt-20 grid gap-6 text-left sm:mt-24 lg:grid-cols-3">
           {products.map((product) => (
             <Link
               key={product.slug}
               href={product.href}
-              className="product-preview glow-border group overflow-hidden rounded-[24px] border border-slate-200 bg-white p-3 shadow-[0_30px_80px_-45px_rgba(15,29,53,.42)] transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-4 focus-visible:outline-none sm:p-4"
+              className="product-preview group overflow-hidden rounded-[24px] border border-slate-200 bg-white p-3 shadow-[0_30px_80px_-45px_rgba(15,29,53,.42)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_40px_90px_-40px_rgba(15,29,53,.5)] focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-4 focus-visible:outline-none sm:p-4"
             >
               <div className="overflow-hidden rounded-[16px] border border-slate-200 bg-slate-50">
                 <Image

@@ -299,7 +299,8 @@ export function SolutionsShowcase() {
             <span className="text-sm text-slate-500">GCC markets served</span>
           </div>
           <h2 className="section-title mt-4">
-            Customer work and business operations, clearly connected.
+            Customer work and business operations,{" "}
+            <span className="gradient-text">clearly connected.</span>
           </h2>
           <p className="section-copy mx-auto mt-5 max-w-2xl">
             Wazely gives teams focused tools for the relationships and
