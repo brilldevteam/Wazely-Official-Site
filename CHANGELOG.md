@@ -83,6 +83,9 @@ All notable changes to this project are documented in this file.
 
 ### Fixed
 
+- Centered the mobile proof and product rows around their widest content,
+  aligned the product illustrations and icon tiles, and tightened the gap
+  before the proof section.
 - Applied a logo-inspired purple dark theme throughout the homepage, including
   the hero, solution stories, testimonials, and contact form.
 - Slowed the mobile navigation drawer and backdrop animation.
