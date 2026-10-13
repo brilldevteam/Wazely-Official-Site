@@ -6,8 +6,8 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
-- Gently animated, layered CRM, ERP, Color, and regional reach artwork with a soft edge glow around the homepage hero on desktop and mobile,
-  with reduced-motion support.
+- Flaticon animated icons for the homepage hero, with visible author credit and
+  static alternatives for visitors who prefer reduced motion.
 - A redesigned homepage with solution stories for CRM, ERP, and Wazely Color,
   illustrated product rows, a consultation callout, and clearly labeled sample
   testimonials.

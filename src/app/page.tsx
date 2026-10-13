@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { ContactForm } from "@/components/marketing/contact-form";
 import { HomeSolutionTabs } from "@/components/marketing/home-solution-tabs";
-import { HeroClipart } from "@/components/marketing/hero-clipart";
+import { HeroAnimatedIcon } from "@/components/marketing/hero-animated-icon";
 import { ScrollReveal } from "@/components/marketing/scroll-reveal";
 import { faqItems } from "@/data/faq";
 import { products } from "@/data/products";
@@ -54,10 +54,10 @@ export default function Home() {
   return <div className="video-home">
     <section className="hv-hero" aria-labelledby="home-heading">
       <div className="hv-hero-art" aria-hidden="true">
-        <div className="hv-hero-art-card hv-hero-art-crm"><HeroClipart kind="crm" /></div>
-        <div className="hv-hero-art-card hv-hero-art-erp"><HeroClipart kind="erp" /></div>
-        <div className="hv-hero-art-card hv-hero-art-color"><HeroClipart kind="color" /></div>
-        <div className="hv-hero-art-card hv-hero-art-reach"><HeroClipart kind="reach" /></div>
+        <div className="hv-hero-art-card hv-hero-art-crm"><HeroAnimatedIcon kind="chat" /></div>
+        <div className="hv-hero-art-card hv-hero-art-erp"><HeroAnimatedIcon kind="dashboard" /></div>
+        <div className="hv-hero-art-card hv-hero-art-color"><HeroAnimatedIcon kind="color" /></div>
+        <div className="hv-hero-art-card hv-hero-art-reach"><HeroAnimatedIcon kind="globe" /></div>
       </div>
       <div className="page-shell hv-hero-inner">
         <p className="hv-hero-eyebrow">Connected software for modern businesses</p>

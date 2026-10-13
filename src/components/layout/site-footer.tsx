@@ -57,8 +57,9 @@ export function SiteFooter() {
           ))}
         </div>
       </div>
-      <div className="page-shell mt-12 border-t border-slate-200 pt-6 text-sm text-slate-500">
-        © {new Date().getFullYear()} Wazely
+      <div className="page-shell mt-12 flex flex-wrap items-center justify-between gap-3 border-t border-slate-200 pt-6 text-sm text-slate-500">
+        <span>© {new Date().getFullYear()} Wazely</span>
+        <a href="https://www.flaticon.com/animated-icons" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Animated icons designed by Magnific from Flaticon</a>
       </div>
     </footer>
   );
